@@ -1,3 +1,13 @@
+:root {
+  --clip-size-middle: 16px;
+  --clip-size-corner: 23px;
+}
+@media (max-width: 768px) {
+  :root {
+    --clip-size-middle: 6px;
+    --clip-size-corner: 12px;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -212,7 +222,7 @@ button {
   margin-top: 34px;
   left: 40px;
   right: 40px;
-  z-index: 10;
+  z-index: 100;
   -webkit-transition: all 230ms ease;
   transition: all 230ms ease;
 }
@@ -324,6 +334,9 @@ button {
   -webkit-column-gap: 16px;
      -moz-column-gap: 16px;
           column-gap: 16px;
+}
+.header__icon img {
+  width: 100%;
 }
 .header__icon,
 .header__menu-button {
@@ -536,8 +549,8 @@ button {
 }
 .tariff-card {
   background: #f0f0f0;
-  -webkit-clip-path: polygon(23px 0, 0 23px, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(23px 0, 0 23px, 0 100%, 100% 100%, 100% 0);
+  -webkit-clip-path: polygon(var(--clip-size-corner) 0, 0 var(--clip-size-corner), 0 100%, 100% 100%, 100% 0);
+          clip-path: polygon(var(--clip-size-corner) 0, 0 var(--clip-size-corner), 0 100%, 100% 100%, 100% 0);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,8 +562,8 @@ button {
 }
 @media (max-width: 768px) {
   .tariff-card {
-    -webkit-clip-path: polygon(12px 0, 0 12px, 0 100%, 100% 100%, 100% 0);
-            clip-path: polygon(12px 0, 0 12px, 0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(var(--clip-size-corner) 0, 0 var(--clip-size-corner), 0 100%, 100% 100%, 100% 0);
+            clip-path: polygon(var(--clip-size-corner) 0, 0 var(--clip-size-corner), 0 100%, 100% 100%, 100% 0);
   }
 }
 .tariff-card__image {
@@ -865,8 +878,8 @@ button {
   padding: 20px;
   -webkit-animation: fadeIn 0.4s ease-out;
           animation: fadeIn 0.4s ease-out;
-  -webkit-clip-path: polygon(23px 0, calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px);
-          clip-path: polygon(23px 0, calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px);
+  -webkit-clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
+          clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1362,15 +1375,11 @@ button {
   }
 }
 .instagram-gallery {
-  --clip-size-middle: 16px;
-  --clip-size-corner: 23px;
   margin-top: 128px;
   position: relative;
 }
 @media (max-width: 768px) {
   .instagram-gallery {
-    --clip-size-middle: 6px;
-    --clip-size-corner: 12px;
     margin-top: 32px;
   }
 }
@@ -1422,7 +1431,7 @@ button {
   position: absolute;
   background: #2b2e30;
   top: 0px;
-  left: -1;
+  left: -1px;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   z-index: -1;
@@ -1718,8 +1727,8 @@ button {
   min-height: 604px;
   padding: 128px 39px;
   margin-top: 128px;
-  -webkit-clip-path: polygon(23px 0, calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px);
-          clip-path: polygon(23px 0, calc(100% - 23px) 0, 100% 23px, 100% calc(100% - 23px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 23px), 0 23px);
+  -webkit-clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
+          clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
 }
 @media (max-width: 768px) {
   .tariffs-banner {
@@ -1805,7 +1814,7 @@ button {
 }
 @media (max-width: 768px) {
   .gallery {
-    padding-top: 60px;
+    padding-block: 60px;
   }
 }
 .gallery__container {
@@ -1873,13 +1882,33 @@ button {
   }
 }
 .gallery__item {
-  max-width: 785px;
   height: auto;
+  position: relative;
 }
 @media (max-width: 768px) {
   .gallery__item {
     max-width: 270px;
   }
+}
+.gallery__caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  color: #fff;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.65);
+  padding: 32px;
+}
+.gallery__caption:empty {
+  display: none;
+  padding: 0;
+}
+.gallery__caption p {
+  max-width: 68%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 130%;
 }
 .gallery .owl-stage-outer {
   width: 100vw;
@@ -1896,16 +1925,6 @@ button {
   .gallery .owl-stage-outer {
     margin-inline: -12px !important;
     padding-inline: 12px !important;
-  }
-}
-.gallery .owl-item {
-  --clip-size-middle: 16px;
-  --clip-size-corner: 23px;
-}
-@media (max-width: 768px) {
-  .gallery .owl-item {
-    --clip-size-middle: 6px;
-    --clip-size-corner: 12px;
   }
 }
 .gallery .owl-item:nth-of-type(6n+1) {
@@ -1942,7 +1961,6 @@ button {
 }
 @media (max-width: 768px) {
   .map {
-    margin-top: 48px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1957,7 +1975,6 @@ button {
 .map__map {
   width: 100%;
   height: 768px;
-  pointer-events: none;
 }
 @media (max-width: 768px) {
   .map__map {
