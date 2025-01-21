@@ -577,15 +577,16 @@
 
 <dialog id="modal-feedback" class="modal">
   <form method="dialog" class="modal__form">
-    <div class="modal__form-content visually-hidden">
+    <div class="modal__form-content">
       <button type="button" class="modal__close js-modal-close" aria-label="Закрыть">✖</button>
     <h2 class="modal__title">Заказать звонок</h2>
     <label>
-      <input type="text" class="modal__input" placeholder="Ваше имя" required />
+      <input type="text" name="name" class="modal__input" placeholder="Ваше имя" required />
     </label>
     <label>
       <input
         type="tel"
+        name="phone"
         class="modal__input"
         placeholder="Телефон"
         pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"
@@ -597,7 +598,7 @@
     </p>
     <button type="submit" class="button modal__submit">Перезвоните мне</button>
     </div>
-    <div class="form-sucess ">
+    <div class="form-sucess visually-hidden">
       <h2 class="modal__title typography">Спасибо!</h2>
       <div class="form-sucess__body">
         <img src="img/icons/success.svg" alt="Успех!" class="form-sucess__icon">
@@ -647,11 +648,12 @@
         
       </div>
       <label>
-        <input type="text" class="modal__input" placeholder="Ваше имя" required />
+        <input type="text"  name="name" class="modal__input" placeholder="Ваше имя" required />
       </label>
       <label>
         <input
           type="tel"
+          name="phone"
           class="modal__input"
           placeholder="Телефон"
           pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"

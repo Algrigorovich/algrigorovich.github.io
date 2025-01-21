@@ -709,7 +709,7 @@ button {
 }
 .footer__info {
   text-align: center;
-  padding-block: 12px;
+  padding: 12px;
   background-color: #f0f0f0;
   color: #535353;
   font-size: 16px;
@@ -1081,6 +1081,7 @@ button {
   }
 }
 .modal {
+  min-height: 400px;
   max-width: 466px;
   width: 100%;
   border: none;
