@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Хвоя 33</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/owl.carousel.css">
+<link rel="stylesheet" href="styles/main.css">
+<script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="img/logo.svg" alt="Логотип Хвоя 33" class="logo" />
+      <p class="header__caption">Банный комлекс</p>
+    </div>
+
+    <nav class="header__nav nav">
+      <a href="#tariffs" class="nav__link nav__link_tariffs">Выбрать тариф</a>
+      <a href="#contacts" class="nav__link nav__link_contacts">Как доехать</a>
+    </nav>
+
+    <a href="tel:+79107700909" class="button header__phone">+7 910 770-09-09</a>
+
+    <div class="header__mobile mobile-element">
+      <a href="#contacts" class="header__icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.5 13.6364H28H26.5ZM16 29L15.1605 30.2431L16 30.81L16.8395 30.2431L16 29ZM5.5 13.6364H4H5.5ZM16 3V4.5V3ZM25 13.6364C25 17.1771 22.7183 20.6544 20.1545 23.3959C18.902 24.735 17.6447 25.8323 16.6989 26.5953C16.2271 26.9758 15.8359 27.2707 15.5655 27.4685C15.4304 27.5674 15.3257 27.6418 15.2564 27.6904C15.2218 27.7147 15.1961 27.7325 15.1799 27.7436C15.1718 27.7492 15.1661 27.7531 15.1628 27.7553C15.1612 27.7565 15.1602 27.7571 15.1598 27.7574C15.1596 27.7575 15.1596 27.7576 15.1597 27.7575C15.1597 27.7574 15.1599 27.7573 15.16 27.7573C15.1602 27.7571 15.1605 27.7569 16 29C16.8395 30.2431 16.8399 30.2428 16.8403 30.2426C16.8405 30.2424 16.8409 30.2421 16.8413 30.2419C16.842 30.2414 16.843 30.2407 16.844 30.24C16.8462 30.2385 16.849 30.2366 16.8524 30.2343C16.8593 30.2296 16.8686 30.2233 16.8804 30.2152C16.9039 30.199 16.9371 30.1759 16.9794 30.1463C17.064 30.0869 17.1849 30.001 17.3369 29.8898C17.6407 29.6675 18.0697 29.3438 18.5824 28.9303C19.6053 28.1052 20.973 26.9127 22.3456 25.445C25.0317 22.5728 28 18.3684 28 13.6364H25ZM16 29C16.8395 27.7569 16.8398 27.7571 16.84 27.7573C16.8401 27.7573 16.8403 27.7574 16.8403 27.7575C16.8404 27.7576 16.8404 27.7575 16.8402 27.7574C16.8398 27.7571 16.8388 27.7565 16.8372 27.7553C16.8339 27.7531 16.8282 27.7492 16.8201 27.7436C16.8039 27.7325 16.7782 27.7147 16.7436 27.6904C16.6743 27.6418 16.5696 27.5674 16.4345 27.4685C16.1641 27.2707 15.7729 26.9758 15.3011 26.5953C14.3553 25.8323 13.098 24.735 11.8455 23.3959C9.2817 20.6544 7 17.1771 7 13.6364H4C4 18.3684 6.9683 22.5728 9.65445 25.445C11.027 26.9127 12.3947 28.1052 13.4176 28.9303C13.9303 29.3438 14.3593 29.6675 14.6631 29.8898C14.8151 30.001 14.936 30.0869 15.0206 30.1463C15.0629 30.1759 15.0961 30.199 15.1196 30.2152C15.1314 30.2233 15.1407 30.2296 15.1476 30.2343C15.151 30.2366 15.1538 30.2385 15.156 30.24C15.157 30.2407 15.158 30.2414 15.1587 30.2419C15.1591 30.2421 15.1595 30.2424 15.1597 30.2426C15.1601 30.2428 15.1605 30.2431 16 29ZM7 13.6364C7 11.207 7.95285 8.88107 9.64286 7.16911L7.5079 5.06152C5.25964 7.33898 4 10.4238 4 13.6364H7ZM9.64286 7.16911C11.3322 5.45781 13.6193 4.5 16 4.5V1.5C12.8111 1.5 9.7568 2.78341 7.5079 5.06152L9.64286 7.16911ZM16 4.5C18.3807 4.5 20.6678 5.45781 22.3571 7.16911L24.4921 5.06152C22.2432 2.78341 19.1889 1.5 16 1.5V4.5ZM22.3571 7.16911C24.0471 8.88107 25 11.207 25 13.6364H28C28 10.4238 26.7404 7.33898 24.4921 5.06152L22.3571 7.16911ZM17.5 13.5C17.5 14.3284 16.8284 15 16 15V18C18.4853 18 20.5 15.9853 20.5 13.5H17.5ZM16 15C15.1716 15 14.5 14.3284 14.5 13.5H11.5C11.5 15.9853 13.5147 18 16 18V15ZM14.5 13.5C14.5 12.6716 15.1716 12 16 12V9C13.5147 9 11.5 11.0147 11.5 13.5H14.5ZM16 12C16.8284 12 17.5 12.6716 17.5 13.5H20.5C20.5 11.0147 18.4853 9 16 9V12Z" fill="#ffffff"/>
+          </svg>
+                      
+
+      </a>
+      <a href="tel:+79107700909" class="header__icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.3334 22.56V26.56C29.3349 26.9313 29.2589 27.2989 29.1101 27.6391C28.9613 27.9793 28.7431 28.2848 28.4695 28.5358C28.1959 28.7868 27.8728 28.9779 27.5211 29.0969C27.1693 29.2159 26.7966 29.2601 26.4267 29.2266C22.3239 28.7808 18.3827 27.3788 14.9201 25.1333C11.6985 23.0862 8.96719 20.3549 6.92007 17.1333C4.66671 13.6549 3.2644 9.69463 2.82674 5.5733C2.79342 5.20459 2.83724 4.83298 2.95541 4.48213C3.07357 4.13128 3.2635 3.80889 3.51309 3.53546C3.76269 3.26204 4.06648 3.04358 4.40513 2.894C4.74378 2.74441 5.10986 2.66698 5.48007 2.66663H9.48007C10.1271 2.66026 10.7545 2.8894 11.2451 3.31134C11.7357 3.73328 12.0562 4.31923 12.1467 4.95997C12.3156 6.24006 12.6287 7.49694 13.0801 8.70663C13.2595 9.18387 13.2983 9.70252 13.1919 10.2011C13.0856 10.6998 12.8386 11.1574 12.4801 11.52L10.7867 13.2133C12.6848 16.5514 15.4487 19.3152 18.7867 21.2133L20.4801 19.52C20.8426 19.1615 21.3003 18.9144 21.7989 18.8081C22.2975 18.7018 22.8162 18.7406 23.2934 18.92C24.5031 19.3714 25.76 19.6845 27.0401 19.8533C27.6878 19.9447 28.2793 20.2709 28.7021 20.77C29.125 21.269 29.3496 21.9061 29.3334 22.56Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          
+      </a>
+      <button class="header__menu-button js-menu-toggle" aria-label="Открыть меню">
+        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 1.89991L19.75 1.8999H0.25M10 9.39991L19.75 9.3999H0.25M10 16.8999L19.75 16.8999H0.25" stroke="white" stroke-width="2"/>
+          </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" aria-hidden="true">
+  <button class="mobile-menu__close js-menu-close" aria-label="Закрыть меню">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.00003 5.13929L19 19M5 18.8607L19 5" stroke="white" stroke-width="2"/>
+      </svg>                                     
+  </button>
+  <ul class="mobile-menu__list">
+    <li class="mobile-menu__item"><a href="#tariffs">Выбрать тариф</a></li>
+    <li class="mobile-menu__item"><a href="#route">Как доехать</a></li>
+    <li class="mobile-menu__item"><button class="js-open-feedback-modal">Заказать звонок</button></li>
+  </ul>
+</nav>
+        <!-- MAIN CONTENT START -->
+
+        <section class="intro js-intro">
+  <video class="video intro__video js-intro-video" muted poster="img/video-poster.webp"> 
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" />
+  </video>
+
+  <div class="intro__content">
+    <h1 class="intro__title typography typography--h1">
+      <span>Новый</span>
+      банный комплекс
+      в cосновом лесу
+    </h1>
+    <p class="intro__subtitle typography">в 15 минутах от центра Владимира</p>
+    <button type="button" class="intro__play-button js-play-button" aria-label="Включить видео">
+      <img src="img/play.svg" alt="">
+    </button>
+  </div>
+  <button type="button" class="intro__mute-button js-mute-button muted" aria-label="Включить/выключить звук">volume</button>
+</section>
+        
+
+<section class="instagram-gallery swiper js-instagram-slider ">
+  <a class="instagram-gallery__banner" href="#" target="_blank" rel="noopener noreferrer">
+    <img src="img/instagram-logo.svg" alt="Логотип Инстраграм" class="instagram-gallery__icon">
+    <h2 class="instagram-gallery__title typography">Загляните в наш Instagram</h2>
+    <span class="instagram-gallery__subtitle">@bani_hvoya</span>
+  </a>
+  <div class="instagram-gallery__list owl-carousel">
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-1.webp" srcset="img/instagram/gallery-1@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-2.webp" srcset="img/instagram/gallery-2@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-3.webp" srcset="img/instagram/gallery-3@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-4.webp" srcset="img/instagram/gallery-4@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-5.webp" srcset="img/instagram/gallery-5@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-1.webp" srcset="img/instagram/gallery-1@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-2.webp" srcset="img/instagram/gallery-2@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-3.webp" srcset="img/instagram/gallery-3@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-4.webp" srcset="img/instagram/gallery-4@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-5.webp" srcset="img/instagram/gallery-5@2x.webp 2x" alt="" />
+      </div>
+    
+      <div class="instagram-gallery__item">
+        <img loading="lazy" src="img/instagram/gallery-1.webp" srcset="img/instagram/gallery-1@2x.webp 2x" alt="" />
+      </div>
+    
+  </div>
+</section>
+
+        <section class="about">
+  <div class="container about__container">
+    <h2 class="about__header typography typography_h2">Ваша история возрождения <span>начинается здесь!</span></h2>
+    <div class="about__content">
+      <p class="about__text typography">У нас вы найдете все, что нужно для отличного отдыха с семьей или друзьями. Час
+        с эфирными маслами, жаркая баня и уединение от суеты.</p>
+
+      <p class="about__text typography">Приглашаем вас в место, где каждая деталь создана для вашего комфорта. Встретьте
+        лучшую версию себя вместе с нами! </p>
+
+      <p class="about__text typography">Наш банный комплекс — это ваш оазис уюта и здоровья. Забудьте о повседневной
+        суете и погрузитесь в мир гармонии и благополучия.
+        Мы предлагаем вам всё необходимое для идеального отдыха!</p>
+    </div>
+  </div>
+</section>
+        <section class="parmaster">
+  <div class="container parmaster__container">
+    <div class="parmaster__image">
+      <img src="img/parmaster.webp" srcset="img/parmaster@2x.webp 2x" alt="Пармастер" />
+    </div>
+    <div class="parmaster__content">
+      <h2 class="typography typography_h2">Пармастер — ключ&nbsp;к&nbsp;вашему релаксу</h2>
+      <p class="typography">
+        Пармастер создаёт комфортные и безопасные условия для отдыхающих, помогая им достичь максимального расслабления и оздоровления. 
+      </p>
+      <p class="typography">Он также может советовать посетителям наиболее подходящие виды процедур, исходя из их предпочтений и состояния здоровья.</p>
+      <a href="#" class="button parmaster__button">Забронировать время</a>
+    </div>
+  </div>
+</section>
+         
+ 
+
+
+
+  
+
+<section class="tariffs" id="tariffs">
+  <div class="container">
+    <h2 class="tariffs__header typography typography_h2">Выберите тариф</h2>
+    <ul class="tariffs__list">
+      
+      <li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/tariff-1.webp" alt="Девушка в бане" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Стандарт</h3>
+          <ul class="tariff-card__option-list">
+            
+            <li class="tariff-card__option">Баня с размещением до 6 человек (3 часа)</li>
+            
+          </ul>
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">6 000 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <button
+              type="button"
+              class="tariff-card__button button js-open-feedback-modal"
+            >
+              Забронировать
+            </button>
+          </div>
+        </div>
+      </li>
+      
+      <li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/tariff-2.webp" alt="Девушка в бане" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Хвойный день</h3>
+          <ul class="tariff-card__option-list">
+            
+            <li class="tariff-card__option">Чан с горячей водой под открытым небом (1 час)</li>
+            
+          </ul>
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">4 500 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <button
+              type="button"
+              class="tariff-card__button button js-open-feedback-modal"
+            >
+              Забронировать
+            </button>
+          </div>
+        </div>
+      </li>
+      
+      <li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/tariff-1.webp" alt="Девушка в бане" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Большой отдых</h3>
+          <ul class="tariff-card__option-list">
+            
+            <li class="tariff-card__option">Баня с размещением до 6 человек (3 часа)</li>
+            
+            <li class="tariff-card__option">Чан с горячей водой под открытым небом (1 час)</li>
+            
+            <li class="tariff-card__option">Мангал и еда</li>
+            
+          </ul>
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">4 500 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <button
+              type="button"
+              class="tariff-card__button button js-open-feedback-modal"
+            >
+              Забронировать
+            </button>
+          </div>
+        </div>
+      </li>
+      
+    </ul>
+
+    <h2 class="tariffs__header typography typography_h2">Собери свой тариф</h2>
+    <ul class="tariffs__list">
+      <li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/custom-1.webp" alt="Баня Хвоя 33" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Баня</h3>
+         
+            <div class="tariff-card__desciption">
+              Баня с размещением до 6 человек.
+            </div>
+         
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">6 000 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <div class="button js-add-button">Добавить</div>
+            <form class="counter visually-hidden">
+              <button
+                type="button"
+                class="counter__button counter__button_decrease js-decrease"
+              >
+                −
+              </button>
+              <div class="counter__input-wrapper">
+                <input
+                  type="number"
+                  class="counter__value"
+                  value="1"
+                  min="0"
+                  max="24"
+                />
+                <span class="counter__unit">ч.</span>
+              </div>
+              <button
+                type="button"
+                class="counter__button counter__button_increase js-increase"
+              >
+                +
+              </button>
+            </form>
+          </div>
+        </div>
+      </li><li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/custom-2.webp" alt="Чан под открытым небом Хвоя 33" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Чан под открытым небом</h3>
+         
+            <div class="tariff-card__desciption">
+              Чан с горячей водой под открытым небом с размещением до 6 человек.
+            </div>
+         
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">4 500 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <div class="button js-add-button">Добавить</div>
+            <form class="counter visually-hidden">
+              <button
+                type="button"
+                class="counter__button counter__button_decrease js-decrease"
+              >
+                −
+              </button>
+              <div class="counter__input-wrapper">
+                <input
+                  type="number"
+                  class="counter__value"
+                  value="1"
+                  min="0"
+                  max="24"
+                />
+                <span class="counter__unit">ч.</span>
+              </div>
+              <button
+                type="button"
+                class="counter__button counter__button_increase js-increase"
+              >
+                +
+              </button>
+            </form>
+          </div>
+        </div>
+      </li><li class="tariffs__card tariff-card">
+        <div class="tariff-card__badges">
+          <span class="tariff-card__badge tariff-card__badge_red"
+            >ежедневно</span
+          >
+          <span class="tariff-card__badge tariff-card__badge_green"
+            >5% скидка</span
+          >
+        </div>
+        <div class="tariff-card__image">
+          <img src="img/tariffs/custom-3.webp" alt="Аренда квадроцикла Хвоя 33" />
+        </div>
+        <div class="tariff-card__content">
+          <h3 class="tariff-card__header typography">Аренда квадроцикла</h3>
+         
+            <div class="tariff-card__desciption">
+              Квадроцикл мощностью 500 кубов. Аренда от 1 часа с инструктором.
+            </div>
+         
+          <div class="tariff-card__footer">
+            <div class="tariff-card__prices">
+              <span class="tariff-card__old-price">4 500 ₽</span>
+              <span class="tariff-card__price">3 500 ₽</span>
+            </div>
+            <div class="button js-add-button">Добавить</div>
+            <form class="counter visually-hidden">
+              <button
+                type="button"
+                class="counter__button counter__button_decrease js-decrease"
+              >
+                −
+              </button>
+              <div class="counter__input-wrapper">
+                <input
+                  type="number"
+                  class="counter__value"
+                  value="1"
+                  min="0"
+                  max="24"
+                />
+                <span class="counter__unit">ч.</span>
+              </div>
+              <button
+                type="button"
+                class="counter__button counter__button_increase js-increase"
+              >
+                +
+              </button>
+            </form>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="tariffs-banner">
+      <div class="tariffs-banner__image-wrapper">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              img/tariffs/tariffs-banner-mobile.webp,
+              img/tariffs/tariffs-banner-mobile@2x.webp 2x
+            "
+          />
+          <img
+            loading="lazy"
+            src="img/tariffs/tariffs-banner.webp"
+            alt="Аренда квадрациклов"
+            srcset="img/tariffs/tariffs-banner@2x.webp 2x"
+            class="tariffs-banner__image"
+          />
+        </picture>
+      </div>
+
+      <div class="tariffs-banner__content">
+        <h2 class="tariffs-banner__header typography typography_h2">
+          Квадроциклы в&nbsp;аренду
+        </h2>
+        <p class="tariffs-banner__text typography">
+          Возьмите перерыв от городской суеты и ощутите прилив адреналина, мчась
+          по зеленым тропинкам хвойного леса на мощном квадроцикле!
+        </p>
+        <p class="tariffs-banner__text typography">
+          Аренда квадроциклов у нас — это ваш шанс насладиться незабываемыми
+          пейзажами и острыми ощущениями среди вековых деревьев.
+        </p>
+        <button type="button" class="tariffs-banner__button button js-open-feedback-modal">
+          Арендовать за 4 500 ₽ / час
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="gallery ">
+  <div class="container gallery__container swiper js-gallery-slider">
+    <div class="gallery__head">
+      <h2 class="typography typography_h2">Галерея</h2>
+      <div class="gallery__navigation">
+        <button type="button" class="gallery__button gallery__button_prev slider-button-prev" aria-label="слайд назад">
+          <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29 9.5H1M1 9.5C1 9.5 3 9.5 6 6.5C9 3.5 10 0.5 10 0.5M1 9.5C1 9.5 3 9.5 6 12.5C9 15.5 10 18.5 10 18.5" stroke="currentColor" stroke-width="3"/>
+            </svg>
+        </button>
+        <button type="button" class="gallery__button gallery__button_next slider-button-next" aria-label="слайд вперед">
+          <svg width="29" height="19" viewBox="0 0 29 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 9.5H28M28 9.5C28 9.5 26 9.5 23 6.5C20 3.5 19 0.5 19 0.5M28 9.5C28 9.5 26 9.5 23 12.5C20 15.5 19 18.5 19 18.5" stroke="currentColor" stroke-width="3"/>
+            </svg>
+                         
+        </button>
+      </div>
+    </div>
+    <div class="gallery__list owl-carousel">
+      <div class="gallery__item">
+        <img src="img/gallery/gallery-1.webp" alt="Галерея 1" srcset="img/gallery/gallery-1@2x.webp 2x">
+      </div><div class="gallery__item">
+        <img src="img/gallery/gallery-2.webp" alt="Галерея 2" srcset="img/gallery/gallery-2@2x.webp 2x">
+      </div><div class="gallery__item">
+        <img src="img/gallery/gallery-3.webp" alt="Галерея 3" srcset="img/gallery/gallery-3@2x.webp 2x">
+      </div><div class="gallery__item">
+        <img src="img/gallery/gallery-4.webp" alt="Галерея 4" srcset="img/gallery/gallery-4@2x.webp 2x">
+      </div><div class="gallery__item">
+        <img src="img/gallery/gallery-5.webp" alt="Галерея 5" srcset="img/gallery/gallery-5@2x.webp 2x">
+      </div><div class="gallery__item">
+        <img src="img/gallery/gallery-6.webp" alt="Галерея 6" srcset="img/gallery/gallery-6@2x.webp 2x">
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="map" id="contacts">
+  <div id="map" class="map__map"></div>
+  <div class="map__contacts">
+    <h2 class="map__header typography typography_h2">Как нас найти</h2>
+    <div class="map__info">
+      <div class="map__phone">
+        <span class="map__caption">Телефон</span>
+        <a href="tel:+79107700909">+7 910 770-09-09</a>
+      </div>
+      <div class="map__address">
+        <span class="map__caption">Адрес</span>
+        <p class="typography">Владимирская обл., Судогодский р-н, дер. Высоково, терр. Переведеново, Лесная ул. 3</p>
+      </div>
+    </div>
+    <div class="map__button button">Построить маршрут</div>
+  </div>
+</section>
+        
+        <!-- MAIN CONTENT END -->
+        <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__logo">
+        <img src="img/logo.svg" alt="Логотип Хвоя 33" class="logo" />
+        <p class="footer__copyright typography">Хвоя 33 © 2024. Все права защищены.</p>
+      </div>
+    <ul class="socials">
+      <li class="socials__item">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="img/icons/instagram.svg" alt="Логотип Инстаграм" />
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="img/icons/avito.svg" alt="Логотип Авито" />
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="img/icons/vk.svg" alt="Логотип Вконтакте" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <p class="footer__info typography">
+    Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.
+  </p>
+</footer>
+
+        
+
+<dialog id="modal-feedback" class="modal">
+  <form method="dialog" class="modal__form">
+    <div class="modal__form-content visually-hidden">
+      <button type="button" class="modal__close js-modal-close" aria-label="Закрыть">✖</button>
+    <h2 class="modal__title">Заказать звонок</h2>
+    <label>
+      <input type="text" class="modal__input" placeholder="Ваше имя" required />
+    </label>
+    <label>
+      <input
+        type="tel"
+        class="modal__input"
+        placeholder="Телефон"
+        pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"
+        required
+      />
+    </label>
+    <p class="modal__text typography">
+      Вы даете согласие на <a href="#">обработку персональных данных</a>
+    </p>
+    <button type="submit" class="button modal__submit">Перезвоните мне</button>
+    </div>
+    <div class="form-sucess ">
+      <h2 class="modal__title typography">Спасибо!</h2>
+      <div class="form-sucess__body">
+        <img src="img/icons/success.svg" alt="Успех!" class="form-sucess__icon">
+        <p class="form-sucess__text">Перезвоним вам в течение 09:32 минут</p>
+        <button type="button" class="form-sucess__button button button_light js-modal-close">Окей</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="modal-order" class="modal">
+  <form method="dialog" class="modal__form">
+    <button type="button" class="modal__close js-modal-close" aria-label="Закрыть">✖</button>
+    <div class="modal__form-content ">
+      <h2 class="modal__title">Ваш заказ</h2>
+      <div class="order-info">
+        <ul class="order-info__list">
+          
+          <li class="order-info__item">
+            <div class="order-info__description">
+              <h3 class="typography">Квадроцикл</h3>
+              <span>3 ч. x 4500 ₽ </span>
+            </div>
+            <div class="order-info__price">13 500₽</div>
+          </li>
+          
+          <li class="order-info__item">
+            <div class="order-info__description">
+              <h3 class="typography">Чан под открытым небом</h3>
+              <span>3 ч. x 4500 ₽ </span>
+            </div>
+            <div class="order-info__price">13 500₽</div>
+          </li>
+          
+          <li class="order-info__item">
+            <div class="order-info__description">
+              <h3 class="typography">Баня</h3>
+              <span>3 ч. x 4500 ₽ </span>
+            </div>
+            <div class="order-info__price">13 500₽</div>
+          </li>
+          
+          <li class="order-info__item">
+            <div class="order-info__summary">Итого: 13 500₽</div>
+          </li>
+        </ul>
+        
+      </div>
+      <label>
+        <input type="text" class="modal__input" placeholder="Ваше имя" required />
+      </label>
+      <label>
+        <input
+          type="tel"
+          class="modal__input"
+          placeholder="Телефон"
+          pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"
+          required
+        />
+      </label>
+      <p class="modal__text">
+        Вы даете согласие на <a href="#">обработку персональных данных</a>
+      </p>
+      <button type="submit" class="button modal__submit">Оформить заказ</button>
+    </div>
+    <div class="form-sucess visually-hidden">
+      <h2 class="modal__title typography">Спасибо!</h2>
+      <div class="form-sucess__body">
+        <img src="img/icons/success.svg" alt="Успех!" class="form-sucess__icon">
+        <p class="form-sucess__text">Перезвоним вам в течение 09:32 минут</p>
+        <button type="button" class="form-sucess__button button button_light js-modal-close">Окей</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+    </div>
+    <button class="order-banner button js-open-order-modal visually-hidden">
+        Оформить заказ <span>&ensp;x&ensp;9 600 ₽</span>
+    </button>
+
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
+<script src="/scripts/owl.carousel.min.js"></script>
+<script src="/scripts/main.js"></script>
+</body>
+</html>
