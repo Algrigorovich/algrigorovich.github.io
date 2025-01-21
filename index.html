@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Хвоя 33</title>
+
+<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg" />
+<link rel="shortcut icon" href="img/favicons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/owl.carousel.css">
+<link rel="stylesheet" href="styles/plyr.css">
 <link rel="stylesheet" href="styles/main.css">
-<script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
+<script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script><link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 <body>
     <div class="site-wrapper">
-        <header class="header">
+        <header class="header js-header">
   <div class="header__container">
     <div class="header__logo">
       <img src="img/logo.svg" alt="Логотип Хвоя 33" class="logo" />
@@ -59,14 +66,14 @@
   </button>
   <ul class="mobile-menu__list">
     <li class="mobile-menu__item"><a href="#tariffs">Выбрать тариф</a></li>
-    <li class="mobile-menu__item"><a href="#route">Как доехать</a></li>
+    <li class="mobile-menu__item"><a href="#contacts">Как доехать</a></li>
     <li class="mobile-menu__item"><button class="js-open-feedback-modal">Заказать звонок</button></li>
   </ul>
 </nav>
         <!-- MAIN CONTENT START -->
 
         <section class="intro js-intro">
-  <video class="video intro__video js-intro-video" muted poster="img/video-poster.webp"> 
+  <video class="video intro__video js-intro-video" muted autoplay loop poster="img/video-poster.webp"> 
     <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" />
   </video>
 
@@ -87,6 +94,7 @@
 
 <section class="instagram-gallery swiper js-instagram-slider ">
   <a class="instagram-gallery__banner" href="#" target="_blank" rel="noopener noreferrer">
+    <div class="instagram-gallery__banner-bg"></div>
     <img src="img/instagram-logo.svg" alt="Логотип Инстраграм" class="instagram-gallery__icon">
     <h2 class="instagram-gallery__title typography">Загляните в наш Instagram</h2>
     <span class="instagram-gallery__subtitle">@bani_hvoya</span>
@@ -167,7 +175,7 @@
         Пармастер создаёт комфортные и безопасные условия для отдыхающих, помогая им достичь максимального расслабления и оздоровления. 
       </p>
       <p class="typography">Он также может советовать посетителям наиболее подходящие виды процедур, исходя из их предпочтений и состояния здоровья.</p>
-      <a href="#" class="button parmaster__button">Забронировать время</a>
+      <button type="button" class="button parmaster__button js-open-feedback-modal">Забронировать время</button>
     </div>
   </div>
 </section>
@@ -539,9 +547,10 @@
         <p class="typography">Владимирская обл., Судогодский р-н, дер. Высоково, терр. Переведеново, Лесная ул. 3</p>
       </div>
     </div>
-    <div class="map__button button">Построить маршрут</div>
+    <a href="#" class="map__button button js-map-link">Построить маршрут</a>
   </div>
 </section>
+
         
         <!-- MAIN CONTENT END -->
         <footer class="footer">
@@ -578,32 +587,55 @@
 <dialog id="modal-feedback" class="modal">
   <form method="dialog" class="modal__form">
     <div class="modal__form-content">
-      <button type="button" class="modal__close js-modal-close" aria-label="Закрыть">✖</button>
-    <h2 class="modal__title">Заказать звонок</h2>
-    <label>
-      <input type="text" name="name" class="modal__input" placeholder="Ваше имя" required />
-    </label>
-    <label>
-      <input
-        type="tel"
-        name="phone"
-        class="modal__input"
-        placeholder="Телефон"
-        pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"
-        required
-      />
-    </label>
-    <p class="modal__text typography">
-      Вы даете согласие на <a href="#">обработку персональных данных</a>
-    </p>
-    <button type="submit" class="button modal__submit">Перезвоните мне</button>
+      <button
+        type="button"
+        class="modal__close js-modal-close"
+        aria-label="Закрыть"
+      >
+        ✖
+      </button>
+      <h2 class="modal__title">Заказать звонок</h2>
+      <label>
+        <input
+          type="text"
+          name="name"
+          class="modal__input"
+          placeholder="Ваше имя"
+          required
+        />
+      </label>
+      <label>
+        <input
+          type="tel"
+          name="phone"
+          class="modal__input"
+          placeholder="Телефон"
+          pattern="\\+?\\d{1,4}[-\\s]?\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}"
+          required
+        />
+      </label>
+      <p class="modal__text typography">
+        Вы даете согласие на <a href="#">обработку персональных данных</a>
+      </p>
+      <button type="submit" class="button modal__submit">
+        Перезвоните мне
+      </button>
     </div>
     <div class="form-sucess visually-hidden">
       <h2 class="modal__title typography">Спасибо!</h2>
       <div class="form-sucess__body">
-        <img src="img/icons/success.svg" alt="Успех!" class="form-sucess__icon">
+        <img
+          src="img/icons/success.svg"
+          alt="Успех!"
+          class="form-sucess__icon"
+        />
         <p class="form-sucess__text">Перезвоним вам в течение 09:32 минут</p>
-        <button type="button" class="form-sucess__button button button_light js-modal-close">Окей</button>
+        <button
+          type="button"
+          class="form-sucess__button button button_light js-modal-close"
+        >
+          Окей
+        </button>
       </div>
     </div>
   </form>
@@ -611,8 +643,14 @@
 
 <dialog id="modal-order" class="modal">
   <form method="dialog" class="modal__form">
-    <button type="button" class="modal__close js-modal-close" aria-label="Закрыть">✖</button>
-    <div class="modal__form-content ">
+    <button
+      type="button"
+      class="modal__close js-modal-close"
+      aria-label="Закрыть"
+    >
+      ✖
+    </button>
+    <div class="modal__form-content">
       <h2 class="modal__title">Ваш заказ</h2>
       <div class="order-info">
         <ul class="order-info__list">
@@ -638,17 +676,23 @@
               <h3 class="typography">Баня</h3>
               <span>3 ч. x 4500 ₽ </span>
             </div>
-            <div class="order-info__price">13 500₽</div>
+            <div class="order-info__price">13
+500₽</div>
           </li>
           
           <li class="order-info__item">
             <div class="order-info__summary">Итого: 13 500₽</div>
           </li>
         </ul>
-        
       </div>
       <label>
-        <input type="text"  name="name" class="modal__input" placeholder="Ваше имя" required />
+        <input
+          type="text"
+          name="name"
+          class="modal__input"
+          placeholder="Ваше имя"
+          required
+        />
       </label>
       <label>
         <input
@@ -668,13 +712,34 @@
     <div class="form-sucess visually-hidden">
       <h2 class="modal__title typography">Спасибо!</h2>
       <div class="form-sucess__body">
-        <img src="img/icons/success.svg" alt="Успех!" class="form-sucess__icon">
+        <img
+          src="img/icons/success.svg"
+          alt="Успех!"
+          class="form-sucess__icon"
+        />
         <p class="form-sucess__text">Перезвоним вам в течение 09:32 минут</p>
-        <button type="button" class="form-sucess__button button button_light js-modal-close">Окей</button>
+        <button
+          type="button"
+          class="form-sucess__button button button_light js-modal-close"
+        >
+          Окей
+        </button>
       </div>
     </div>
   </form>
 </dialog>
+
+<dialog id="modal-video" class="modal-video">
+  <div class="plyr__video-wrapper">
+    <video id="player" playsinline controls data-poster="img/video-poster.webp">
+      <source
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+        type="video/webm"
+      />
+  </div>
+</dialog>
+
+
 
     </div>
     <button class="order-banner button js-open-order-modal visually-hidden">
@@ -684,6 +749,7 @@
     <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
 <script src="/scripts/owl.carousel.min.js"></script>
+<script src="/scripts/plyr.js"></script>
 <script src="/scripts/main.js"></script>
 </body>
 </html>
