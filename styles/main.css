@@ -106,6 +106,45 @@ ul {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
 }
+::-ms-backdrop {
+  -ms-transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    opacity 0.5s;
+  transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    opacity 0.5s;
+  opacity: 0;
+}
+dialog,
+::backdrop {
+  -webkit-transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    opacity 0.5s;
+  transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    opacity 0.5s;
+  opacity: 0;
+}
+[open]::-ms-backdrop {
+  opacity: 1;
+}
+[open],
+[open]::backdrop {
+  opacity: 1;
+}
+@starting-style {
+  [open]::-ms-backdrop {
+    opacity: 0;
+  }
+  [open],
+  [open]::backdrop {
+    opacity: 0;
+  }
+}
 .typography {
   margin: 0;
   padding: 0;
@@ -178,13 +217,13 @@ button {
 }
 @media (min-width: 950px) {
   .button:hover {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    -webkit-filter: grayscale(0.4);
+            filter: grayscale(0.4);
   }
 }
 .button:active {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-filter: grayscale(0.4);
+          filter: grayscale(0.4);
 }
 @media (max-width: 1280px) {
   .button {
@@ -1535,12 +1574,12 @@ button {
   .parmaster {
     margin-top: 48px;
     background-position: 74% 22px;
+    background-size: 100vw;
   }
 }
 @media (max-width: 575px) {
   .parmaster {
     background-size: 673px;
-    background-position: -223px 22px;
   }
 }
 .parmaster__container {
@@ -1577,27 +1616,37 @@ button {
   bottom: 34px;
   z-index: 0;
 }
-.parmaster__image img {
-  border-top-left-radius: 53% 23%;
-  border-top-right-radius: 53% 23%;
-  width: 100%;
-  height: 100%;
-}
 @media (max-width: 1500px) {
   .parmaster__image {
     max-width: 65%;
     bottom: 0;
   }
 }
+@media (max-width: 1199px) {
+  .parmaster__image {
+    bottom: 15%;
+  }
+}
 @media (max-width: 768px) {
   .parmaster__image {
     max-width: 100%;
     margin-bottom: 20px;
-    top: -10px;
     left: 29px;
     width: 412px;
     height: 291px;
   }
+}
+@media (max-width: 575px) {
+  .parmaster__image {
+    top: -10px;
+    bottom: unset;
+  }
+}
+.parmaster__image img {
+  border-top-left-radius: 53% 23%;
+  border-top-right-radius: 53% 23%;
+  width: 100%;
+  height: 100%;
 }
 .parmaster__content {
   max-width: 49%;
@@ -1625,7 +1674,6 @@ button {
 }
 @media (max-width: 768px) {
   .parmaster__content {
-    max-width: unset;
     text-align: left;
     gap: 16px;
   }
@@ -1633,6 +1681,7 @@ button {
 @media (max-width: 575px) {
   .parmaster__content {
     margin-top: 278px;
+    max-width: unset;
   }
 }
 @media (max-width: 575px) {
@@ -2102,4 +2151,22 @@ button {
 }
 .map__button {
   width: 100%;
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .map__button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+.map__button_mobile {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .map__button_mobile {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
