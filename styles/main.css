@@ -71,6 +71,8 @@ ul {
           flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .container {
   width: 100%;
@@ -257,6 +259,7 @@ button {
   position: fixed;
   top: 0;
   width: calc(100% - 80px);
+  max-width: 1840px;
   overflow: hidden;
   margin-top: 34px;
   left: 40px;
@@ -268,6 +271,11 @@ button {
 .header_scrolling {
   -webkit-transform: translateY(-34px);
           transform: translateY(-34px);
+}
+@media (min-width: 1920px) {
+  .header {
+    left: calc((100vw - 1840px - 17px) / 2);
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -953,7 +961,12 @@ button {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-.modal__close:hover {
+@media (min-width: 950px) {
+  .modal__close:hover {
+    color: #0a5c2e;
+  }
+}
+.modal__close:active {
   color: #0a5c2e;
 }
 .modal__title {
@@ -1011,11 +1024,24 @@ button {
   width: 100%;
 }
 .modal-video {
+  --plyr-video-control-background-hover: #0a5c2e;
   width: 70vw;
   background-color: rgba(0, 0, 0, 0.8);
-  --plyr-video-control-background-hover: #0a5c2e;
+  padding: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.modal-video::-ms-backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-video::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-video:has(.plyr--playing)::-ms-backdrop {
+  background-color: black;
+}
+.modal-video:has(.plyr--playing)::backdrop {
+  background-color: black;
 }
 .modal-video video {
   width: 100%;
@@ -1033,6 +1059,18 @@ button {
 }
 .modal-video::-webkit-scrollbar {
   display: none;
+}
+.modal-video .modal__close {
+  color: #fff;
+  z-index: 1;
+}
+@media (min-width: 950px) {
+  .modal-video .modal__close:hover {
+    color: #228c50;
+  }
+}
+.modal-video .modal__close:active {
+  color: #228c50;
 }
 @-webkit-keyframes fadeIn {
   from {
@@ -1274,6 +1312,7 @@ button {
   height: 100%;
   -webkit-animation: rotate 25s linear infinite forwards;
           animation: rotate 25s linear infinite forwards;
+  pointer-events: none;
 }
 @media (min-width: 950px) {
   .intro__play-button:hover {
