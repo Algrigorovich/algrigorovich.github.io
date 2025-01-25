@@ -978,7 +978,7 @@ button {
 }
 @media (max-width: 950px) {
   .modal__title {
-    font-size: 18px;
+    font-size: 32px;
   }
 }
 .modal__input {
