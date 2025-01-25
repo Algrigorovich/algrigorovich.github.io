@@ -945,8 +945,6 @@ button {
   border: none;
   background-color: #ffffff;
   padding: 20px;
-  -webkit-animation: fadeIn 0.4s ease-out;
-          animation: fadeIn 0.4s ease-out;
   -webkit-clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
           clip-path: polygon(var(--clip-size-corner) 0, calc(100% - var(--clip-size-corner)) 0, 100% var(--clip-size-corner), 100% calc(100% - var(--clip-size-corner)), calc(100% - var(--clip-size-corner)) 100%, var(--clip-size-corner) 100%, 0 calc(100% - var(--clip-size-corner)), 0 var(--clip-size-corner));
   -ms-overflow-style: none;
@@ -995,6 +993,7 @@ button {
 .modal__title {
   text-align: left;
   font-size: 42px;
+  margin-top: 12px;
   margin-bottom: 10px;
   color: #2b2e30;
 }
@@ -1098,22 +1097,6 @@ button {
 }
 .modal-video .modal__close:active {
   color: #228c50;
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .order-info__list {
   display: -webkit-box;
