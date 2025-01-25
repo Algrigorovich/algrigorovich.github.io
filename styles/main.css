@@ -1136,6 +1136,8 @@ button {
 }
 .order-info__price {
   font-weight: 600;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .form-sucess__body {
   display: -webkit-box;
