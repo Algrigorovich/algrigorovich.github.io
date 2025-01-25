@@ -108,43 +108,65 @@ ul {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
 }
-::-ms-backdrop {
-  -ms-transition:
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete,
-    opacity 0.5s;
-  transition:
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete,
-    opacity 0.5s;
-  opacity: 0;
-}
-dialog,
-::backdrop {
-  -webkit-transition:
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete,
-    opacity 0.5s;
-  transition:
-    display 0.5s allow-discrete,
-    overlay 0.5s allow-discrete,
-    opacity 0.5s;
-  opacity: 0;
-}
-[open]::-ms-backdrop {
-  opacity: 1;
-}
-[open],
-[open]::backdrop {
-  opacity: 1;
-}
-@starting-style {
-  [open]::-ms-backdrop {
+@supports (transition: opacity 0.5s) and (transition: display 0.5s allow-discrete) {
+  ::-ms-backdrop {
+    -ms-transition:
+      display 0.5s allow-discrete,
+      overlay 0.5s allow-discrete,
+      opacity 0.5s;
+    transition:
+      display 0.5s allow-discrete,
+      overlay 0.5s allow-discrete,
+      opacity 0.5s;
     opacity: 0;
+  }
+  dialog,
+  ::backdrop {
+    -webkit-transition:
+      display 0.5s allow-discrete,
+      overlay 0.5s allow-discrete,
+      opacity 0.5s;
+    transition:
+      display 0.5s allow-discrete,
+      overlay 0.5s allow-discrete,
+      opacity 0.5s;
+    opacity: 0;
+  }
+  [open]::-ms-backdrop {
+    opacity: 1;
   }
   [open],
   [open]::backdrop {
+    opacity: 1;
+  }
+  @starting-style {
+    [open]::-ms-backdrop {
+      opacity: 0;
+    }
+    [open],
+    [open]::backdrop {
+      opacity: 0;
+    }
+  }
+}
+@supports not (transition: display 0.5s allow-discrete) {
+  ::-ms-backdrop {
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
+  }
+  dialog,
+  ::backdrop {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  [open]::-ms-backdrop {
+    opacity: 1;
+  }
+  [open],
+  [open]::backdrop {
+    opacity: 1;
   }
 }
 .typography {
