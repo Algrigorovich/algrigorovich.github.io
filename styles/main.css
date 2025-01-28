@@ -1048,6 +1048,7 @@ button {
 .modal-video {
   --plyr-video-control-background-hover: #0a5c2e;
   width: 70vw;
+  min-height: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0;
   -ms-overflow-style: none;
@@ -1084,6 +1085,10 @@ button {
 }
 .modal-video::-webkit-scrollbar {
   display: none;
+}
+.modal-video .plyr__menu__container [role=menu] {
+  max-height: 100px;
+  overflow: scroll;
 }
 .modal-video .modal__close {
   color: #fff;
