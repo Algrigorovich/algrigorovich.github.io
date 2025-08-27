@@ -25,12 +25,12 @@
       href="./assets/favicon-KHq3uxCo.svg"
       type="image/svg+xml"
     />
-    <link rel="icon" href="./assets/favicons/favicon.png" type="image/png" />
+    <link rel="icon" href="/assets/favicons/favicon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon-B33jhzfV.ico" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
-    <script type="module" crossorigin src="./assets/main-DBSLJHHS.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/drawer-CHc8dMl-.js" />
-    <link rel="stylesheet" crossorigin href="./assets/drawer-iGcFzb9q.css" />
+    <script type="module" crossorigin src="./assets/main-XlLVzQGo.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/drawer-D4wHSLnY.js" />
+    <link rel="stylesheet" crossorigin href="./assets/drawer-xQdYdMn7.css" />
   </head>
 
   <body>
@@ -61,22 +61,30 @@
     <header class="header">
       <div class="container header__inner">
         <nav class="nav js-header-menu" aria-label="Основная навигация">
-          <ul id="navMenu" class="nav__list">
-            <li class="nav__item nav__item--active">
-              <a class="nav__link" href="#about">О нас</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./menu.html">Кухня</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#events">Мероприятия</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
+          <div class="nav__wrapper">
+            <ul id="navMenu" class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a class="nav__link" href="#about">О нас</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#menu">Кухня</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#events">Мероприятия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="header__button button button--primary js-rent-button mobile-element"
+            >
+              Забронировать столик
+            </button>
+          </div>
         </nav>
-        <a href="/vnov/" class="logo">
+        <a href="/" class="logo">
           <img src="./assets/logo-DkAnyXGs.svg" alt="Лого Вновь" />
         </a>
         <button
@@ -110,27 +118,33 @@
             </div>
           </div>
           <div class="hero__media">
-            <svg class="hero__svg" viewBox="0 0 1440 750">
+            <svg
+              class="hero__svg"
+              viewBox="0 0 1440 750"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+            >
               <defs>
                 <mask id="image-mask" maskUnits="userSpaceOnUse">
                   <image
                     id="mask-image"
                     href="data:image/svg+xml,%3csvg%20width='270'%20height='335'%20viewBox='0%200%20270%20335'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_208_8170'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='270'%20height='335'%3e%3cpath%20d='M0%20335V135.523H19C24.5228%20135.523%2029%20130.978%2029%20125.371V107.606C29%2048.1769%2076.4578%200%20135%200C193.542%200%20241%2048.1769%20241%20107.606V125.371C241%20130.978%20245.477%20135.523%20251%20135.523H270V335H0Z'%20fill='black'/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_208_8170)'%3e%3cpath%20d='M0%200H273V335H0V0Z'%20fill='white'/%3e%3c/g%3e%3c/svg%3e"
                     x="0"
-                    y="200"
-                    width="100%"
-                    height="100%"
-                  />
+                    y="0"
+                  ></image>
                 </mask>
               </defs>
 
               <image
                 href="./assets/hero-D6JnK3MA.webp"
                 mask="url(#image-mask)"
-                width="100%"
-                height="100%"
-                preserveAspectRatio="none meet"
-              />
+                x="0"
+                y="0"
+                width="1440"
+                height="750"
+                preserveAspectRatio="none"
+              ></image>
             </svg>
           </div>
           <div class="hero__caption">
@@ -157,7 +171,7 @@
                 <img
                   src="./assets/about-CvG4jwlY.webp"
                   sr
-                  alt="./src./assets/images/about@2x.webp 2ч"
+                  alt="/assets/images/about@2x.webp 2ч"
                 />
               </div>
               <p
