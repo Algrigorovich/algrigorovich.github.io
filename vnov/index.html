@@ -28,9 +28,9 @@
     <link rel="icon" href="./assets/favicons/favicon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon-B33jhzfV.ico" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
-    <script type="module" crossorigin src="./assets/main-Vp7MYozj.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/drawer-BK2fot0s.js" />
-    <link rel="stylesheet" crossorigin href="./assets/drawer-Bl6pTgTp.css" />
+    <script type="module" crossorigin src="./assets/main-B73GYzGH.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/drawer-8xr4R_Ds.js" />
+    <link rel="stylesheet" crossorigin href="./assets/drawer-DEs6OvoW.css" />
   </head>
 
   <body>
@@ -144,7 +144,7 @@
                 <img
                   src="./assets/about-CvG4jwlY.webp"
                   sr
-                  alt="./assets/images/about@2x.webp 2ч"
+                  alt="./src./assets/images/about@2x.webp 2ч"
                 />
               </div>
               <p
@@ -305,7 +305,7 @@
         </div>
       </section>
 
-      <section class="events section" id="events">
+      <section class="events section js-events" id="events">
         <div class="container">
           <div class="events__head">
             <h2 class="events__title typography typography--h2">
@@ -411,7 +411,11 @@
       </section>
 
       <section class="map" id="contacts">
-        <div id="map" class="map__map"></div>
+        <div
+          id="map"
+          class="map__map js-map"
+          data-marker-path="./src./assets/icons/marker.svg"
+        ></div>
         <div class="map__contacts">
           <h2 class="map__header typography typography--h3">контакты</h2>
 
