@@ -28,13 +28,16 @@
     <link rel="icon" href="./assets/favicons/favicon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon-B33jhzfV.ico" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
-    <script type="module" crossorigin src="./assets/main-BBNEpLra.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/drawer-OSwI3Atv.js" />
-    <link rel="modulepreload" crossorigin href="./assets/map-wCVz39XW.js" />
+    <script
+      type="module"
+      crossorigin
+      src="./assets/drawer-OSwI3Atv.js"
+    ></script>
+    <script type="module" crossorigin src="./assets/map-wCVz39XW.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/drawer-BaUPGplU.css" />
   </head>
 
-  <body class="mainpage">
+  <body>
     <div class="info js-info is-open">
       <p class="info__text typography">
         Уважаемые гости! 30 августа ресторан закрыт на спецобслуживание.
@@ -105,412 +108,292 @@
     </header>
 
     <main>
-      <section class="hero" id="booking">
-        <div class="hero__content container">
-          <h1 class="hero__title typography typography--h1">
-            Ресторан, в котором история оживает
-          </h1>
-          <hr />
-          <div class="hero__bottom">
-            <span>Летне-Перевозинская, 1А</span>
-            <div class="hero__time">
-              <span>Пн–чт 8:30–23:00</span>
-              <span>пт–вс 8:30–00:00</span>
-            </div>
-          </div>
-          <div class="hero-overlay">
-            <img src="./assets/hero-D6JnK3MA.webp" class="hero-image" />
-          </div>
-          <div class="hero__caption">
-            <p class="typography hero__caption-text">
-              В самом сердце Владимира мы заново открываем русскую
-              гастрономическую культуру — авторская кухня, атмосфера дворянского
-              дома и вкус, который возвращает в прошлое.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div class="page-title page-title--secondary">
+        <h1 class="page-title__title typography typography--h1">
+          Афиша событий
+        </h1>
+        <p class="page-title__description typography typography--body-text">
+          Регулярно проводим гастрономические ужины, винные дегустации,
+          творческие коллаборации с шефами и сомелье. Это события, где вкус
+          встречается с культурой.
+        </p>
+      </div>
 
-      <section class="about section" id="about">
-        <div class="about__content container">
-          <h2 class="about__header typography typography--h2">
-            Вновое прочтение русской элегантности
-          </h2>
-          <div class="about__wrapper">
-            <div class="about__left">
-              <h3 class="about__title typography typography--h3">
-                Гастрономия с&nbsp;историей
-              </h3>
-              <div class="about__image">
-                <img
-                  src="./assets/about-CvG4jwlY.webp"
-                  sr
-                  alt="./assets/images/about@2x.webp 2ч"
-                />
-              </div>
-              <p
-                class="about__description typography typography typography--body-text"
-              >
-                Мы вновь открываем любимые русские вкусы — тонко, изысканно, c
-                уважением к традиции.
-              </p>
+      <div class="events-list container">
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">31</span>
+              <span class="event__date-details">августа<span>2025</span></span>
+              <span class="event__more">Подробнее</span>
             </div>
-            <div class="about__photo"></div>
-            <div class="about__right swiper">
-              <ul class="swiper-wrapper about__gallery">
-                <li class="swiper-slide">
-                  <img
-                    loading="lazy"
-                    src="./assets/about-gallery-1-BWoMbg2X.webp"
-                    alt="Интерьер ресторана"
-                  />
-                </li>
-                <li class="swiper-slide">
-                  <img
-                    loading="lazy"
-                    src="./assets/about-gallery-1-BWoMbg2X.webp"
-                    alt="Интерьер ресторана"
-                  />
-                </li>
-                <li class="swiper-slide">
-                  <img
-                    loading="lazy"
-                    src="./assets/about-gallery-1-BWoMbg2X.webp"
-                    alt="Интерьер ресторана"
-                  />
-                </li>
-                <li class="swiper-slide">
-                  <img
-                    loading="lazy"
-                    src="./assets/about-gallery-1-BWoMbg2X.webp"
-                    alt="Интерьер ресторана"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="chef section" id="menu">
-        <div class="chef__container container">
-          <div class="chef__left">
-            <div class="chef__image">
+            <div class="event__poster">
               <img
-                loading="lazy"
-                src="./assets/chef-Cx4_HKJa.webp"
-                srcset="./assets/chef@2x-NfGsSEJX.webp 2x"
-                alt="Шеф-повар Илья Захаров"
+                class="event__image"
+                src="./assets/events-1-BQmVFBHS.webp"
+                alt="альт"
               />
             </div>
-          </div>
-          <div class="chef__right">
-            <div class="chef__content">
-              <h2 class="chef__header typography typography--h2">
-                Вновили вкусы национальной кухни
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Гастроужин с шеф-поваром Николаем Заболоцким
               </h2>
-              <p class="chef__description typography typography--body-text">
-                Современное прочтение русской кухни: изысканные блюда,
-                вдохновлённые традицией, с акцентном на вкус, сезонность
-                и авторскую подачу.
+              <p class="event__description typography typography--body-text">
+                4 курса и авторский коктейль
               </p>
-              <a href="" class="chef__button button button--primary-solid"
-                >Посмотреть меню</a
-              >
             </div>
-            <div class="chef__info">
-              <div class="chef__avatar">
-                <img
-                  loading="lazy"
-                  src="./assets/avatar-B2MAbYWt.webp"
-                  alt="Илья Захаров"
-                />
-              </div>
-              <div class="chef__details">
-                <span class="chef__name">Илья Захаров</span>
-                <span class="chef__role"
-                  >Шеф-повар, основатель, автор концепции</span
-                >
-              </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">28</span>
+              <span class="event__date-details">августа<span>2025</span></span>
+              <span class="event__more">Подробнее</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery section">
-        <div class="container">
-          <h2 class="visually-hidden">Галерея</h2>
-          <div class="swiper gallery__carousel js-gallery-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-1-cqvPUqiz.webp"
-                  alt="Готовка блюда"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-2-C5d3MtCo.webp"
-                  alt="Сервировка"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-3-SYl2iv6T.webp"
-                  alt="Готовое блюдо"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-1-cqvPUqiz.webp"
-                  alt="Готовка блюда"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-2-C5d3MtCo.webp"
-                  alt="Сервировка"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-3-SYl2iv6T.webp"
-                  alt="Готовое блюдо"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-1-cqvPUqiz.webp"
-                  alt="Готовка блюда"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-2-C5d3MtCo.webp"
-                  alt="Сервировка"
-                />
-              </div>
-              <div class="swiper-slide">
-                <span class="counter"></span>
-                <img
-                  loading="lazy"
-                  src="./assets/gallery-3-SYl2iv6T.webp"
-                  alt="Готовое блюдо"
-                />
-              </div>
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-2-CAeGzGyB.webp"
+                alt="альт"
+              />
             </div>
-            <div class="swiper-navigation">
-              <div class="swiper-button swiper-button-prev" aria-label="Назад">
-                <img
-                  loading="lazy"
-                  src="data:image/svg+xml,%3csvg%20width='20'%20height='16'%20viewBox='0%200%2020%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M7.16816%201.12677C7.07709%204.31447%204.43297%206.78985%201.65176%207.94126L19.5796%207.72076V8.54716L1.65176%208.32666C4.43393%209.47807%207.07804%2011.9506%207.16816%2015.1402H6.47981C6.47981%2012.4376%204.50679%2010.2786%202.2011%209.00734C1.94704%208.86929%201.12927%208.42828%200.69593%208.31516L0.542538%208.31324V7.95468L0.696888%207.95277C1.13022%207.83964%201.94608%207.39863%202.2011%207.26058C4.50679%205.98933%206.47981%203.82841%206.47981%201.12677H7.16816Z'%20fill='%23BAA37F'/%3e%3cpath%20d='M1.65242%207.9416L1.65434%208.13334L1.5786%207.76424L1.65242%207.9416ZM7.16882%201.12711V0.935364H7.36632L7.36057%201.13286L7.16882%201.12711ZM19.5812%207.72014L19.5783%207.52839L19.7729%207.52648V7.72014H19.5812ZM19.5812%208.5475H19.7729V8.74212L19.5783%208.73924L19.5812%208.5475ZM1.65338%208.327L1.57956%208.50436L1.65626%208.13526L1.65338%208.327ZM7.16882%2015.1405L7.36057%2015.1348L7.36632%2015.3323H7.16882V15.1405ZM6.48047%2015.1405V15.3323H6.28873V15.1405H6.48047ZM0.696592%208.31549L0.698507%208.12375H0.722475L0.744526%208.1295L0.696592%208.31549ZM0.5432%208.31358L0.541281%208.50532L0.351456%208.50244V8.31358H0.5432ZM0.5432%207.95502H0.351456V7.7652L0.541281%207.76328L0.5432%207.95502ZM0.69755%207.9531L0.745485%208.13813L0.723436%208.14484H0.700426L0.69755%207.9531ZM6.47951%201.12711H6.28777V0.935364H6.47951V1.12711ZM1.57764%207.76424C4.32626%206.62721%206.88984%204.19976%206.97708%201.12231L7.36057%201.13286C7.26661%204.42793%204.54101%206.95317%201.72528%208.118L1.5786%207.76424H1.57764ZM19.5822%207.91188L1.65434%208.13334L1.64859%207.7489L19.5783%207.52935L19.5831%207.91284L19.5822%207.91188ZM19.3885%208.5475V7.72014H19.772V8.5475H19.3885ZM1.65434%208.13526L19.5822%208.35576L19.5783%208.73924L1.64955%208.51874L1.65434%208.13526ZM1.72528%208.14964C4.54005%209.31542%207.26565%2011.8378%207.35961%2015.1348L6.97612%2015.1463C6.88888%2012.064%204.32722%209.64139%201.57956%208.50436L1.72528%208.14964ZM7.16786%2015.3323H6.48047L6.47951%2014.9488H7.16786V15.3323ZM6.28873%2015.1405C6.28873%2012.5386%204.38474%2010.4304%202.10781%209.17641L2.29284%208.84087C4.62825%2010.1265%206.67125%2012.3382%206.67125%2015.1405H6.28873ZM2.10781%209.17641C1.98318%209.10739%201.71761%208.96454%201.43096%208.82457C1.14047%208.68268%200.843273%208.55229%200.64674%208.50052L0.744526%208.1295C0.982286%208.19182%201.30921%208.3385%201.59969%208.48039C1.89306%208.6242%202.16629%208.76992%202.2938%208.83991L2.10877%209.17545L2.10781%209.17641ZM0.545115%208.12183L0.698507%208.12375L0.692755%208.50723L0.539362%208.50532L0.545115%208.12183ZM0.73398%207.95502V8.31262H0.350498V7.95406L0.73398%207.95502ZM0.700426%208.14484L0.545115%208.14676L0.541281%207.76328L0.693716%207.76136L0.700426%208.14484ZM2.29188%207.42965C2.16437%207.49867%201.89306%207.64536%201.59969%207.7882C1.31016%207.93009%200.982285%208.07582%200.745485%208.13813L0.648655%207.76711C0.844233%207.7163%201.14047%207.58496%201.43096%207.44403C1.65938%207.3316%201.88537%207.21429%202.10877%207.09218L2.29188%207.42965ZM6.67221%201.12711C6.67221%203.92941%204.62921%206.14115%202.2938%207.42869L2.10877%207.09218C4.3857%205.83628%206.28777%203.72904%206.28777%201.12711H6.67221ZM7.16882%201.31885H6.48047L6.47951%200.935364H7.16882V1.31885Z'%20fill='%23BAA37F'/%3e%3c/svg%3e"
-                  alt=""
-                />
-              </div>
-              <div class="swiper-button swiper-button-next" aria-label="Вперёд">
-                <img
-                  loading="lazy"
-                  src="data:image/svg+xml,%3csvg%20width='20'%20height='16'%20viewBox='0%200%2020%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M7.16816%201.12677C7.07709%204.31447%204.43297%206.78985%201.65176%207.94126L19.5796%207.72076V8.54716L1.65176%208.32666C4.43393%209.47807%207.07804%2011.9506%207.16816%2015.1402H6.47981C6.47981%2012.4376%204.50679%2010.2786%202.2011%209.00734C1.94704%208.86929%201.12927%208.42828%200.69593%208.31516L0.542538%208.31324V7.95468L0.696888%207.95277C1.13022%207.83964%201.94608%207.39863%202.2011%207.26058C4.50679%205.98933%206.47981%203.82841%206.47981%201.12677H7.16816Z'%20fill='%23BAA37F'/%3e%3cpath%20d='M1.65242%207.9416L1.65434%208.13334L1.5786%207.76424L1.65242%207.9416ZM7.16882%201.12711V0.935364H7.36632L7.36057%201.13286L7.16882%201.12711ZM19.5812%207.72014L19.5783%207.52839L19.7729%207.52648V7.72014H19.5812ZM19.5812%208.5475H19.7729V8.74212L19.5783%208.73924L19.5812%208.5475ZM1.65338%208.327L1.57956%208.50436L1.65626%208.13526L1.65338%208.327ZM7.16882%2015.1405L7.36057%2015.1348L7.36632%2015.3323H7.16882V15.1405ZM6.48047%2015.1405V15.3323H6.28873V15.1405H6.48047ZM0.696592%208.31549L0.698507%208.12375H0.722475L0.744526%208.1295L0.696592%208.31549ZM0.5432%208.31358L0.541281%208.50532L0.351456%208.50244V8.31358H0.5432ZM0.5432%207.95502H0.351456V7.7652L0.541281%207.76328L0.5432%207.95502ZM0.69755%207.9531L0.745485%208.13813L0.723436%208.14484H0.700426L0.69755%207.9531ZM6.47951%201.12711H6.28777V0.935364H6.47951V1.12711ZM1.57764%207.76424C4.32626%206.62721%206.88984%204.19976%206.97708%201.12231L7.36057%201.13286C7.26661%204.42793%204.54101%206.95317%201.72528%208.118L1.5786%207.76424H1.57764ZM19.5822%207.91188L1.65434%208.13334L1.64859%207.7489L19.5783%207.52935L19.5831%207.91284L19.5822%207.91188ZM19.3885%208.5475V7.72014H19.772V8.5475H19.3885ZM1.65434%208.13526L19.5822%208.35576L19.5783%208.73924L1.64955%208.51874L1.65434%208.13526ZM1.72528%208.14964C4.54005%209.31542%207.26565%2011.8378%207.35961%2015.1348L6.97612%2015.1463C6.88888%2012.064%204.32722%209.64139%201.57956%208.50436L1.72528%208.14964ZM7.16786%2015.3323H6.48047L6.47951%2014.9488H7.16786V15.3323ZM6.28873%2015.1405C6.28873%2012.5386%204.38474%2010.4304%202.10781%209.17641L2.29284%208.84087C4.62825%2010.1265%206.67125%2012.3382%206.67125%2015.1405H6.28873ZM2.10781%209.17641C1.98318%209.10739%201.71761%208.96454%201.43096%208.82457C1.14047%208.68268%200.843273%208.55229%200.64674%208.50052L0.744526%208.1295C0.982286%208.19182%201.30921%208.3385%201.59969%208.48039C1.89306%208.6242%202.16629%208.76992%202.2938%208.83991L2.10877%209.17545L2.10781%209.17641ZM0.545115%208.12183L0.698507%208.12375L0.692755%208.50723L0.539362%208.50532L0.545115%208.12183ZM0.73398%207.95502V8.31262H0.350498V7.95406L0.73398%207.95502ZM0.700426%208.14484L0.545115%208.14676L0.541281%207.76328L0.693716%207.76136L0.700426%208.14484ZM2.29188%207.42965C2.16437%207.49867%201.89306%207.64536%201.59969%207.7882C1.31016%207.93009%200.982285%208.07582%200.745485%208.13813L0.648655%207.76711C0.844233%207.7163%201.14047%207.58496%201.43096%207.44403C1.65938%207.3316%201.88537%207.21429%202.10877%207.09218L2.29188%207.42965ZM6.67221%201.12711C6.67221%203.92941%204.62921%206.14115%202.2938%207.42869L2.10877%207.09218C4.3857%205.83628%206.28777%203.72904%206.28777%201.12711H6.67221ZM7.16882%201.31885H6.48047L6.47951%200.935364H7.16882V1.31885Z'%20fill='%23BAA37F'/%3e%3c/svg%3e"
-                  alt=""
-                />
-              </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Блинная неделя — каждый вечер новый вкус
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Ленивое утро с ароматом кофе и живыми звуками винила. Авторские
+                завтраки, свежая выпечка и атмосфера уюта. В плейлисте — джаз,
+                соул, лёгкий рок. Бранч начинается в 11:00, приходите
+                без спешки.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </a>
+        </article>
 
-      <section class="events section js-events" id="events">
-        <div class="container">
-          <div class="events__head">
-            <h2 class="events__title typography typography--h2">
-              Место для ваших встреч
-            </h2>
-            <p class="events__subtitle typography typography--body-text">
-              Особенное место для банкетов, свадеб, деловых ужинов и камерных
-              событий. Уютные залы, тёплая атмосфера и безупречный сервис
-              создадут настроение, которое запомнится.
-            </p>
-            <a href="#" class="events__button button button--primary-solid"
-              >ПОдробнее</a
-            >
-          </div>
-
-          <ul class="events__cards cards">
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events-banquet-uKjqwSnQ.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Банкеты
-                </h3>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events-weddings-DbvAlqve.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Свадьбы
-                </h3>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events-family-B_odfz3B.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Семейные праздники
-                </h3>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events-jubilee-DBYTukSC.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Юбилеи
-                </h3>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events_business-BVcrUSol.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Деловые ужины
-                </h3>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a href="#" class="card">
-                <div class="card__wrapper">
-                  <img
-                    class="card__image"
-                    src="./assets/events-corporates-mwRqAdXx.webp"
-                    alt=""
-                  />
-                </div>
-                <h3 class="card__title typography typography--body-text">
-                  Корпоративы
-                </h3>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="map" id="contacts">
-        <div
-          id="map"
-          class="map__map js-map"
-          data-marker-path="./assets/marker.svg"
-        ></div>
-        <div class="map__contacts">
-          <h2 class="map__header typography typography--h3">контакты</h2>
-
-          <div class="map__info">
-            <div class="map__details">
-              <a class="map__phone" href="tel:+74922771188">+7 4922 77-11-88</a>
-              <a href="mailto:info@vnovv.ru">info@vnovv.ru</a>
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">24</span>
+              <span class="event__date-details">августа <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
             </div>
 
-            <div class="map__time">
-              <span class="map__caption">РЕЖИМ РАБОТЫ</span>
-              <span class="map__hours">Пн–чт 8:30–23:00</span>
-              <span class="map__hours">пт–вс 8:30–00:00</span>
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-3-kaaGY2uE.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">Дегустация мороженого</h2>
+              <p class="event__description typography typography--body-text">
+                5 видов мороженого с владимирской ягодой — земляника, черника,
+                малина, ежевика и клюква.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">16</span>
+              <span class="event__date-details">августа <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
             </div>
 
-            <div class="map__address">
-              <p class="typography">Владимир, Летне-Перевозинская, 1А</p>
-              <a
-                target="_self"
-                href="geo:56.125219,40.397849"
-                class="map__button"
-                >Смотреть на карте</a
-              >
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-4-BsuAu0LH.webp"
+                alt="альт"
+              />
             </div>
-          </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Воскресный бранч под винил
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Ленивое утро с ароматом кофе и живыми звуками винила. Авторские
+                завтраки, свежая выпечка и атмосфера уюта. В плейлисте — джаз,
+                соул, лёгкий рок. Бранч начинается в 11:00, приходите
+                без спешки.
+              </p>
+            </div>
+          </a>
+        </article>
 
-          <div class="map__socials socials">
-            <a href="#" class="socials__item icon-button icon-button--primary">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_207_7227)">
-                  <path
-                    d="M1.06194 7.07322C5.38142 5.19172 8.26104 3.9512 9.70087 3.35189C13.8166 1.64053 14.6708 1.3433 15.2287 1.33335C15.3514 1.33127 15.6245 1.36159 15.8027 1.5058C15.9509 1.62733 15.9926 1.79169 16.0134 1.90697C16.0319 2.02224 16.0574 2.28498 16.0366 2.49007C15.8144 4.83269 14.8491 10.5175 14.3583 13.1413C14.1523 14.2516 13.7426 14.6238 13.3467 14.6601C12.4856 14.7393 11.8328 14.0916 10.9995 13.5455C9.69621 12.6906 8.96014 12.1587 7.69392 11.3246C6.23095 10.3607 7.18 9.83088 8.01334 8.96514C8.23094 8.73851 12.0226 5.29056 12.0944 4.97783C12.1036 4.93871 12.1129 4.79287 12.025 4.71602C11.9393 4.63894 11.8119 4.66532 11.7193 4.68616C11.5874 4.71579 9.50636 6.09265 5.46928 8.81652C4.879 9.22254 4.34429 9.42046 3.8628 9.41005C3.33502 9.3987 2.31656 9.11097 1.55961 8.86513C0.633672 8.56351 -0.104797 8.40402 -0.0399815 7.89175C-0.00757383 7.62508 0.360544 7.35216 1.06194 7.07322Z"
-                    fill="currentColor"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_207_7227">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-            <a href="#" class="socials__item icon-button icon-button--primary">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.71454 12.992C3.24795 12.992 0.129927 9.2444 0 3.0083H2.73829C2.82824 7.58543 4.84693 9.5242 6.44592 9.92396V3.0083H9.0244V6.9558C10.6034 6.78591 12.2622 4.98706 12.8218 3.0083H15.4003C14.9705 5.44678 13.1717 7.24563 11.8925 7.98516C13.1717 8.58478 15.2205 10.1538 16 12.992H13.1617C12.5521 11.0932 11.0331 9.62415 9.0244 9.42426V12.992H8.71454Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">12</span>
+              <span class="event__date-details">августа <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-8-DjIdY8jJ.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Арт-ужин: Еда как искусство
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Ужин, где гастрономия встречается с живописью. Шеф-повар готовит
+                3 блюда, вдохновлённые картинами известных художников. На каждом
+                курсе — история, визуальный образ и кулинарный шедевр.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">8</span>
+              <span class="event__date-details">августа <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-6-CW7BAUVf.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Вкус Владимира: сезонное меню с рассказами о городе
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Каждое блюдо связано с местной легендой или историей.
+                Шеф рассказывает, откуда пошли владимирские блины, как в городе
+                солили грибы и что ели в постные дни.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">2</span>
+              <span class="event__date-details">августа <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-7-rhmP39Rr.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Ужин с музыкой живого романса
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Уютный вечер при свечах в сопровождении русской гитары
+                и голосов, от которых мурашки. Тёплое меню — от томлёной
+                говядины до медовика с заварным кремом.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">30</span>
+              <span class="event__date-details">июля <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-8-DjIdY8jJ.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Арт-ужин: Еда как искусство
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Ужин, где гастрономия встречается с живописью. Шеф-повар готовит
+                3 блюда, вдохновлённые картинами известных художников. На каждом
+                курсе — история, визуальный образ и кулинарный шедевр.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">22</span>
+              <span class="event__date-details">июля <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-4-BsuAu0LH.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">
+                Ужин с поэтом: вечер стихов и вкусов
+              </h2>
+              <p class="event__description typography typography--body-text">
+                Приглашённый поэт читает стихи — современные или классические.
+                К каждому курсу подобран образ: томлёное мясо — к Есенину,
+                облепиховый чай — к Цветаевой.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <article class="event">
+          <a href="./event-details.html" class="event__link">
+            <div class="event__date">
+              <span class="event__date-day typography typography--h3">18</span>
+              <span class="event__date-details">июля <span>2025</span></span>
+              <span class="event__more">Подробнее</span>
+            </div>
+
+            <div class="event__poster">
+              <img
+                class="event__image"
+                src="./assets/events-10-OV2Jrmi0.webp"
+                alt="альт"
+              />
+            </div>
+            <div class="event__details">
+              <h2 class="event__title typography">Соленья и настойки</h2>
+              <p class="event__description typography typography--body-text">
+                Гастроужин с дегустацией домашних заготовок: квашеная капуста,
+                солёные арбузы, черемша. К ним — настойки на хрене, облепихе,
+                смородине. Шеф рассказывает, как правильно сочетать.
+              </p>
+            </div>
+          </a>
+        </article>
+      </div>
     </main>
 
     <footer class="footer">
