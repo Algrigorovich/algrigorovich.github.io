@@ -1,1456 +1,994 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Меню ресторана Вновь</title>
-    <meta
-      name="description"
-      content="Ресторан, в котором история оживает. Гастрономия с традициями и современной элегантностью."
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/apple-touch-icon-J72TASQo.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./assets/favicon-96x96-BssnuIX0.png"
-    />
 
-    <link
-      rel="icon"
-      href="./assets/favicon-KHq3uxCo.svg"
-      type="image/svg+xml"
-    />
-    <link rel="icon" href="./assets/favicons/favicon.png" type="image/png" />
-    <link rel="icon" href="./assets/favicon-B33jhzfV.ico" />
-    <script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
-    <script type="module" crossorigin src="./assets/menu-BNZ9jKLe.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/drawer-JDakeX0r.js" />
-    <link rel="stylesheet" crossorigin href="./assets/drawer-Bw0ierzG.css" />
-  </head>
-  <body>
-    <div class="info js-info is-open">
-      <p class="info__text typography">
-        Уважаемые гости! 30 августа ресторан закрыт на спецобслуживание.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Меню ресторана Вновь</title>
+  <meta name="description"
+    content="Ресторан, в котором история оживает. Гастрономия с традициями и современной элегантностью." />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-J72TASQo.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96-BssnuIX0.png" />
+
+  <link rel="icon" href="./assets/favicon-DHzq8uZ8.svg" type="image/svg+xml" />
+  <link rel="icon" href="./assets/favicons/favicon.png" type="image/png" />
+  <link rel="icon" href="./assets/favicon-B33jhzfV.ico" />
+  <script src="https://api-maps.yandex.ru/v3/?apikey=322e0df3-9b6a-4a31-9d1c-60f8cbae38a7&lang=ru_RU"></script>
+  <script type="module" crossorigin src="./assets/menu-BYsMJyR3.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/drawer-Cixwg0PQ.js">
+  <link rel="stylesheet" crossorigin href="./assets/drawer-DUFBF1ax.css">
+</head>
+
+<body>
+  <div class="info js-info is-open">
+    <p class="info__text typography">Уважаемые гости! 30 августа ресторан закрыт на спецобслуживание.</p>
+    <button type="button" class="info__close js-info-close" aria-label="Закрыть уведомление">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M4.25 4.25L8 8M11.75 11.75L8 8M8 8L4.25 11.75L11.75 4.25" stroke="currentColor" />
+      </svg>
+    </button>
+  </div>
+
+  <header class="header header--beige">
+    <div class="container header__inner">
+      <nav class="nav js-header-menu" aria-label="Основная навигация">
+        <ul id="navMenu" class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="./menu.html">Меню</a></li>
+          <li class="nav__item nav__item--active"><a class="nav__link" href="./celebrations.html">Праздники</a></li>
+          <li class="nav__item"><a class="nav__link" href="./events.html">Афиша</a></li>
+          <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a href="/" class="logo">
+        <img src="./assets/logo-BoRcktQO.svg" alt="Лого Вновь" />
+      </a>
+      <button type="button" class="header__button button button--tertiary js-rent-button">
+        Забронировать столик
+      </button>
+      <button class="hamburger js-toggle-menu" aria-label="Открыть меню" aria-expanded="false">Открыть меню</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-title page-title--primary">
+      <h1 class="page-title__title typography typography--h1">Меню ресторана</h1>
+    </div>
+
+    <div class="tabs js-tabs" aria-label="Разделы меню">
+      <div class="tabs__list">
+        <div class="tabs__container">
+          <button class="tabs__trigger tabs__trigger--active" type="button" data-tab-id="1" role="tab" id="tab-1"
+            aria-controls="panel-1" aria-selected="true" tabindex="0">
+            Основное
+          </button>
+          <button class="tabs__trigger" type="button" data-tab-id="2" role="tab" id="tab-2" aria-controls="panel-2"
+            aria-selected="false" tabindex="-1">
+            Сезонное
+          </button>
+          <button class="tabs__trigger" type="button" data-tab-id="3" role="tab" id="tab-3" aria-controls="panel-3"
+            aria-selected="false" tabindex="-1">
+            Завтраки
+          </button>
+          <button class="tabs__trigger" type="button" data-tab-id="4" role="tab" id="tab-4" aria-controls="panel-4"
+            aria-selected="false" tabindex="-1">
+            Напитки
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <!-- 1-->
+        <div class="tabs__content tabs__content--active menu" data-content-id="1" role="tabpanel" id="panel-1"
+          aria-labelledby="tab-1">
+          <div class="menu__head">
+            <h2 class="menu__title typography typography--h2">Основное меню</h2>
+            <p class="menu__description typography typography--body-text">
+              От форели с лимонной пеной до щуки в сметане с хреном — каждый рецепт бережно собран из культурных
+              пластов русской кухни и переосмыслен с уважением к традиции.
+            </p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Холодные закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--chef js-badge-red" data-text="Блюдо от шефа"></span>
+                        Форель с/с под лимонной пеной
+                      </h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Форель домашнего посола в пряном маринаде, лимонная пена
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--chef js-badge-red" data-text="Блюдо от шефа"></span>
+                        Холодец из бычьих хвостов
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Говяжий язык под муссом из хрена</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Карпаччо из вяленого гуся</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">Вяленый гусь, зеленое масло и микс салата</p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо от шефа"></span>
+                        Тёплый салат с уткой и ананасом
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо"></span>
+                        Карпаччо из нерки с сыром
+                      </h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-salad-D-nzUlm5.webp" alt="Холодные закуски" />
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Горячик закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Копчёный лещ с пюре из репы и малосольными огурчиками
+                      </h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Филе копчёного леща, сливочное пюре из репы, малосольные огурцы и зеленое масло
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Карамелизированная морковь с домашним варенцом и щучьей икрой
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Драники с копчёной сметаной и яйцом пашет</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Картофельные драники, домашняя подкопчённая сметана, классическое яйцо пашет
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-hot-appetizers-F7uTWQkg.webp" alt="горячие закуски" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2-->
+        <div class="tabs__content tabs__content menu" data-content-id="2" role="tabpanel" id="panel-2"
+          aria-labelledby="tab-2">
+          <div class="menu__head">
+            <h2 class="menu__title typography typography--h2">Сезонное меню</h2>
+            <p class="menu__description typography typography--body-text">
+              От форели с лимонной пеной до щуки в сметане с хреном — каждый рецепт бережно собран из культурных
+              пластов русской кухни и переосмыслен с уважением к традиции.
+            </p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Холодные закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Форель с/с под лимонной пеной</h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Форель домашнего посола в пряном маринаде, лимонная пена
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Холодец из бычьих хвостов</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Говяжий язык под муссом из хрена</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Карпаччо из вяленого гуся</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">Вяленый гусь, зеленое масло и микс салата</p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо"></span>
+                        Тёплый салат с уткой и ананасом
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо 
+                          "></span>
+                        Карпаччо из нерки с сыром
+                      </h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-salad-D-nzUlm5.webp" alt="Холодные закуски" />
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Горячик закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Копчёный лещ с пюре из репы и малосольными огурчиками
+                      </h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Филе копчёного леща, сливочное пюре из репы, малосольные огурцы и зеленое масло
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Карамелизированная морковь с домашним варенцом и щучьей икрой
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Драники с копчёной сметаной и яйцом пашет</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Картофельные драники, домашняя подкопчённая сметана, классическое яйцо пашет
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-hot-appetizers-F7uTWQkg.webp" alt="горячие закуски" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3-->
+        <div class="tabs__content tabs__content menu" data-content-id="3" role="tabpanel" id="panel-3"
+          aria-labelledby="tab-3">
+          <div class="menu__head">
+            <h2 class="menu__title typography typography--h2">Завтраки</h2>
+            <p class="menu__description typography typography--body-text">
+              От форели с лимонной пеной до щуки в сметане с хреном — каждый рецепт бережно собран из культурных
+              пластов русской кухни и переосмыслен с уважением к традиции.
+            </p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Холодные закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Форель с/с под лимонной пеной</h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Форель домашнего посола в пряном маринаде, лимонная пена
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Холодец из бычьих хвостов</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Говяжий язык под муссом из хрена</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Карпаччо из вяленого гуся</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">Вяленый гусь, зеленое масло и микс салата</p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо"></span>
+                        Тёплый салат с уткой и ананасом
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо от шефа"></span>
+                        Карпаччо из нерки с сыром
+                      </h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-salad-D-nzUlm5.webp" alt="Холодные закуски" />
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Горячик закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Копчёный лещ с пюре из репы и малосольными огурчиками
+                      </h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Филе копчёного леща, сливочное пюре из репы, малосольные огурцы и зеленое масло
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Карамелизированная морковь с домашним варенцом и щучьей икрой
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Драники с копчёной сметаной и яйцом пашет</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Картофельные драники, домашняя подкопчённая сметана, классическое яйцо пашет
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-hot-appetizers-F7uTWQkg.webp" alt="горячие закуски" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4-->
+        <div class="tabs__content tabs__content menu" data-content-id="4" role="tabpanel" id="panel-4"
+          aria-labelledby="tab-4">
+          <div class="menu__head">
+            <h2 class="menu__title typography typography--h2">НАпитки</h2>
+            <p class="menu__description typography typography--body-text">
+              От форели с лимонной пеной до щуки в сметане с хреном — каждый рецепт бережно собран из культурных
+              пластов русской кухни и переосмыслен с уважением к традиции.
+            </p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Холодные закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Форель с/с под лимонной пеной</h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Форель домашнего посола в пряном маринаде, лимонная пена
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Холодец из бычьих хвостов</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Говяжий язык под муссом из хрена</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Карпаччо из вяленого гуся</h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">Вяленый гусь, зеленое масло и микс салата</p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо от шефа"></span>
+                        Тёплый салат с уткой и ананасом
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        <span class="badge badge--hot js-badge-beige" data-text="Блюдо от шефа"></span>
+                        Карпаччо из нерки с сыром
+                      </h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Отварной говяжий язык, мусс из хрена со сливками
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-salad-D-nzUlm5.webp" alt="Холодные закуски" />
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__wrapper">
+              <div class="menu__left">
+                <h3 class="menu__header typography typography--h3">Горячик закуски</h3>
+                <ul class="menu__list">
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Копчёный лещ с пюре из репы и малосольными огурчиками
+                      </h4>
+                      <span class="menu-item__price">800 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Филе копчёного леща, сливочное пюре из репы, малосольные огурцы и зеленое масло
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">
+                        Карамелизированная морковь с домашним варенцом и щучьей икрой
+                      </h4>
+                      <span class="menu-item__price">2 000 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Холодец из томлённых бычьих хвостов, с бородинскими лепестками и двумя видами горчицы
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                  <li class="menu__list-item menu-item">
+                    <div class="menu-item__top">
+                      <h4 class="typography menu-item__title">Драники с копчёной сметаной и яйцом пашет</h4>
+                      <span class="menu-item__price">359 ₽</span>
+                    </div>
+                    <div class="menu-item__bottom">
+                      <p class="typography menu-item__description">
+                        Картофельные драники, домашняя подкопчённая сметана, классическое яйцо пашет
+                      </p>
+                      <span class="menu-item__weight">300 г</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__image">
+                <img loading="lazy" src="./assets/menu-hot-appetizers-F7uTWQkg.webp" alt="горячие закуски" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="extended-menu">
+      <div class="extended-menu__container container">
+        <p class="extended-menu__caption typography typography--body-text">Калорийность блюд и содержание белков, жиров,
+          углеводов — в
+          расширенной версии меню.</p>
+        <a class="extended-menu__button button button--primary-solid" target="_blank"
+          href="./assets/sample2.pdf">открыть</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="logo">
+          <a href="/" class="logo">
+            <img loading="lazy" src="./assets/logo-footer-1ldP5J-X.svg" alt="Лого ресторана Вновь" />
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__cta">
+          <span>ВНОВЬ — новый ресторан в сердце города</span>
+
+          <button type="button" class="footer__button button button--secondary js-rent-button">
+            Забронировать столик
+          </button>
+        </div>
+        <div class="footer__nav">
+          <nav class="nav nav--footer" aria-label="Навигация в футере">
+            <ul id="navMenuFooter" class="nav__list">
+              <li class="nav__item nav__item--active"><a class="nav__link" href="./about">Меню</a></li>
+              <li class="nav__item"><a class="nav__link" href="./menu.html">праздники</a></li>
+              <li class="nav__item"><a class="nav__link" href="#events">Афиша</a></li>
+              <li class="nav__item"><a class="nav__link" href="./contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__info">
+          <a class="footer__link" href="tel:+74922771188">+7 4922 77-11-88</a>
+          <a class="footer__link" href="mailto:">info@vnovv.ru</a>
+
+          <div class="footer__socials socials">
+            <a href="#" class="socials__item icon-button icon-button--secondary">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_207_7227)">
+                  <path
+                    d="M1.06194 7.07322C5.38142 5.19172 8.26104 3.9512 9.70087 3.35189C13.8166 1.64053 14.6708 1.3433 15.2287 1.33335C15.3514 1.33127 15.6245 1.36159 15.8027 1.5058C15.9509 1.62733 15.9926 1.79169 16.0134 1.90697C16.0319 2.02224 16.0574 2.28498 16.0366 2.49007C15.8144 4.83269 14.8491 10.5175 14.3583 13.1413C14.1523 14.2516 13.7426 14.6238 13.3467 14.6601C12.4856 14.7393 11.8328 14.0916 10.9995 13.5455C9.69621 12.6906 8.96014 12.1587 7.69392 11.3246C6.23095 10.3607 7.18 9.83088 8.01334 8.96514C8.23094 8.73851 12.0226 5.29056 12.0944 4.97783C12.1036 4.93871 12.1129 4.79287 12.025 4.71602C11.9393 4.63894 11.8119 4.66532 11.7193 4.68616C11.5874 4.71579 9.50636 6.09265 5.46928 8.81652C4.879 9.22254 4.34429 9.42046 3.8628 9.41005C3.33502 9.3987 2.31656 9.11097 1.55961 8.86513C0.633672 8.56351 -0.104797 8.40402 -0.0399815 7.89175C-0.00757383 7.62508 0.360544 7.35216 1.06194 7.07322Z"
+                    fill="currentColor" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_207_7227">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a href="#" class="socials__item icon-button icon-button--secondary">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.71454 12.992C3.24795 12.992 0.129927 9.2444 0 3.0083H2.73829C2.82824 7.58543 4.84693 9.5242 6.44592 9.92396V3.0083H9.0244V6.9558C10.6034 6.78591 12.2622 4.98706 12.8218 3.0083H15.4003C14.9705 5.44678 13.1717 7.24563 11.8925 7.98516C13.1717 8.58478 15.2205 10.1538 16 12.992H13.1617C12.5521 11.0932 11.0331 9.62415 9.0244 9.42426V12.992H8.71454Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <span>© 2025. Разработано в дизайн-бюро «Четыре»</span>
+        <a href="#" class="link">Политика конфиденциальности</a>
+        <a href="#" class="link">Реквизиты</a>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="drawer">
+    <div class="drawer__overlay"></div>
+    <div class="drawer__content">
+      <!-- место для контента drawer -->
+    </div>
+  </aside>
+
+  <!-- FORM TEMPLATES-->
+
+  <template id="rentFormTemplate">
+    <div class="drawer__header">
+      <h2 class="drawer__title typography" id="drawerTitle">АРЕНДА&nbsp;ЗАЛА</h2>
+      <p class="typography typography--body-text drawer__subtitle">
+        Оставьте заявку — мы свяжемся с вами, чтобы уточнить детали.
       </p>
-      <button
-        type="button"
-        class="info__close js-info-close"
-        aria-label="Закрыть уведомление"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-        >
+      <button class="drawer__close icon-button icon-button--secondary js-drawer-close" type="button"
+        aria-label="Закрыть" id="drawerClose">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
           <path
-            d="M4.25 4.25L8 8M11.75 11.75L8 8M8 8L4.25 11.75L11.75 4.25"
-            stroke="currentColor"
-          />
+            d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
+            fill="currentColor" />
         </svg>
       </button>
     </div>
 
-    <header class="header header--beige">
-      <div class="container header__inner">
-        <nav class="nav js-header-menu" aria-label="Основная навигация">
-          <ul id="navMenu" class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="./menu.html">Меню</a>
-            </li>
-            <li class="nav__item nav__item--active">
-              <a class="nav__link" href="./celebrations.html">Праздники</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./events.html">Афиша</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="./contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="/" class="logo">
-          <img src="./assets/logo-DkAnyXGs.svg" alt="Лого Вновь" />
-        </a>
-        <button
-          type="button"
-          class="header__button button button--tertiary js-rent-button"
-        >
-          Забронировать столик
-        </button>
-        <button
-          class="hamburger js-toggle-menu"
-          aria-label="Открыть меню"
-          aria-expanded="false"
-        >
-          Открыть меню
-        </button>
+    <form id="rentForm" action="/" class="drawer__form form js-contact-form" method="post">
+      <div class="input-field">
+        <input class="input-field__control" name="name" type="text" placeholder="Имя" autocomplete="name" required />
       </div>
-    </header>
-
-    <main>
-      <div class="page-title page-title--primary">
-        <h1 class="page-title__title typography typography--h1">
-          Меню ресторана
-        </h1>
+      <div class="input-field input-field--error">
+        <input class="input-field__control" name="phone" id="phone" type="tel" placeholder="+7 (999) 123-11-11"
+          inputmode="tel" required />
       </div>
 
-      <div class="tabs js-tabs" aria-label="Разделы меню">
-        <div class="tabs__list">
-          <div class="tabs__container">
-            <button
-              class="tabs__trigger tabs__trigger--active"
-              type="button"
-              data-tab-id="1"
-              role="tab"
-              id="tab-1"
-              aria-controls="panel-1"
-              aria-selected="true"
-              tabindex="0"
-            >
-              Основное
-            </button>
-            <button
-              class="tabs__trigger"
-              type="button"
-              data-tab-id="2"
-              role="tab"
-              id="tab-2"
-              aria-controls="panel-2"
-              aria-selected="false"
-              tabindex="-1"
-            >
-              Сезонное
-            </button>
-            <button
-              class="tabs__trigger"
-              type="button"
-              data-tab-id="3"
-              role="tab"
-              id="tab-3"
-              aria-controls="panel-3"
-              aria-selected="false"
-              tabindex="-1"
-            >
-              Завтраки
-            </button>
-            <button
-              class="tabs__trigger"
-              type="button"
-              data-tab-id="4"
-              role="tab"
-              id="tab-4"
-              aria-controls="panel-4"
-              aria-selected="false"
-              tabindex="-1"
-            >
-              Напитки
-            </button>
-          </div>
-        </div>
-        <div class="container">
-          <!-- 1-->
-          <div
-            class="tabs__content tabs__content--active menu"
-            data-content-id="1"
-            role="tabpanel"
-            id="panel-1"
-            aria-labelledby="tab-1"
-          >
-            <div class="menu__head">
-              <h2 class="menu__title typography typography--h2">
-                Основное меню
-              </h2>
-              <p class="menu__description typography typography--body-text">
-                От форели с лимонной пеной до щуки в сметане с хреном — каждый
-                рецепт бережно собран из культурных пластов русской кухни
-                и переосмыслен с уважением к традиции.
-              </p>
-            </div>
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Холодные закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--chef js-badge-red"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Форель с/с под лимонной пеной
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Форель домашнего посола в пряном маринаде, лимонная
-                          пена
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--chef js-badge-red"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Холодец из бычьих хвостов
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Говяжий язык под муссом из хрена
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карпаччо из вяленого гуся
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Вяленый гусь, зеленое масло и микс салата
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Тёплый салат с уткой и ананасом
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо"
-                          ></span>
-                          Карпаччо из нерки с сыром
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-salad-D-nzUlm5.webp"
-                    alt="Холодные закуски"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Горячик закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Копчёный лещ с пюре из репы и малосольными огурчиками
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Филе копчёного леща, сливочное пюре из репы,
-                          малосольные огурцы и зеленое масло
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карамелизированная морковь с домашним варенцом
-                          и щучьей икрой
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Драники с копчёной сметаной и яйцом пашет
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Картофельные драники, домашняя подкопчённая сметана,
-                          классическое яйцо пашет
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-hot-appetizers-F7uTWQkg.webp"
-                    alt="горячие закуски"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 2-->
-          <div
-            class="tabs__content tabs__content menu"
-            data-content-id="2"
-            role="tabpanel"
-            id="panel-2"
-            aria-labelledby="tab-2"
-          >
-            <div class="menu__head">
-              <h2 class="menu__title typography typography--h2">
-                Сезонное меню
-              </h2>
-              <p class="menu__description typography typography--body-text">
-                От форели с лимонной пеной до щуки в сметане с хреном — каждый
-                рецепт бережно собран из культурных пластов русской кухни
-                и переосмыслен с уважением к традиции.
-              </p>
-            </div>
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Холодные закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Форель с/с под лимонной пеной
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Форель домашнего посола в пряном маринаде, лимонная
-                          пена
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Холодец из бычьих хвостов
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Говяжий язык под муссом из хрена
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карпаччо из вяленого гуся
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Вяленый гусь, зеленое масло и микс салата
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо"
-                          ></span>
-                          Тёплый салат с уткой и ананасом
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо 
-                          "
-                          ></span>
-                          Карпаччо из нерки с сыром
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-salad-D-nzUlm5.webp"
-                    alt="Холодные закуски"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Горячик закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Копчёный лещ с пюре из репы и малосольными огурчиками
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Филе копчёного леща, сливочное пюре из репы,
-                          малосольные огурцы и зеленое масло
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карамелизированная морковь с домашним варенцом
-                          и щучьей икрой
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Драники с копчёной сметаной и яйцом пашет
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Картофельные драники, домашняя подкопчённая сметана,
-                          классическое яйцо пашет
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-hot-appetizers-F7uTWQkg.webp"
-                    alt="горячие закуски"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 3-->
-          <div
-            class="tabs__content tabs__content menu"
-            data-content-id="3"
-            role="tabpanel"
-            id="panel-3"
-            aria-labelledby="tab-3"
-          >
-            <div class="menu__head">
-              <h2 class="menu__title typography typography--h2">Завтраки</h2>
-              <p class="menu__description typography typography--body-text">
-                От форели с лимонной пеной до щуки в сметане с хреном — каждый
-                рецепт бережно собран из культурных пластов русской кухни
-                и переосмыслен с уважением к традиции.
-              </p>
-            </div>
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Холодные закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Форель с/с под лимонной пеной
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Форель домашнего посола в пряном маринаде, лимонная
-                          пена
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Холодец из бычьих хвостов
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Говяжий язык под муссом из хрена
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карпаччо из вяленого гуся
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Вяленый гусь, зеленое масло и микс салата
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо"
-                          ></span>
-                          Тёплый салат с уткой и ананасом
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Карпаччо из нерки с сыром
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-salad-D-nzUlm5.webp"
-                    alt="Холодные закуски"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Горячик закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Копчёный лещ с пюре из репы и малосольными огурчиками
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Филе копчёного леща, сливочное пюре из репы,
-                          малосольные огурцы и зеленое масло
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карамелизированная морковь с домашним варенцом
-                          и щучьей икрой
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Драники с копчёной сметаной и яйцом пашет
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Картофельные драники, домашняя подкопчённая сметана,
-                          классическое яйцо пашет
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-hot-appetizers-F7uTWQkg.webp"
-                    alt="горячие закуски"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 4-->
-          <div
-            class="tabs__content tabs__content menu"
-            data-content-id="4"
-            role="tabpanel"
-            id="panel-4"
-            aria-labelledby="tab-4"
-          >
-            <div class="menu__head">
-              <h2 class="menu__title typography typography--h2">НАпитки</h2>
-              <p class="menu__description typography typography--body-text">
-                От форели с лимонной пеной до щуки в сметане с хреном — каждый
-                рецепт бережно собран из культурных пластов русской кухни
-                и переосмыслен с уважением к традиции.
-              </p>
-            </div>
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Холодные закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Форель с/с под лимонной пеной
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Форель домашнего посола в пряном маринаде, лимонная
-                          пена
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Холодец из бычьих хвостов
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Говяжий язык под муссом из хрена
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карпаччо из вяленого гуся
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Вяленый гусь, зеленое масло и микс салата
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Тёплый салат с уткой и ананасом
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          <span
-                            class="badge badge--hot js-badge-beige"
-                            data-text="Блюдо от шефа"
-                          ></span>
-                          Карпаччо из нерки с сыром
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Отварной говяжий язык, мусс из хрена со сливками
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-salad-D-nzUlm5.webp"
-                    alt="Холодные закуски"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__wrapper">
-                <div class="menu__left">
-                  <h3 class="menu__header typography typography--h3">
-                    Горячик закуски
-                  </h3>
-                  <ul class="menu__list">
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Копчёный лещ с пюре из репы и малосольными огурчиками
-                        </h4>
-                        <span class="menu-item__price">800 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Филе копчёного леща, сливочное пюре из репы,
-                          малосольные огурцы и зеленое масло
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Карамелизированная морковь с домашним варенцом
-                          и щучьей икрой
-                        </h4>
-                        <span class="menu-item__price">2 000 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Холодец из томлённых бычьих хвостов, с бородинскими
-                          лепестками и двумя видами горчицы
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                    <li class="menu__list-item menu-item">
-                      <div class="menu-item__top">
-                        <h4 class="typography menu-item__title">
-                          Драники с копчёной сметаной и яйцом пашет
-                        </h4>
-                        <span class="menu-item__price">359 ₽</span>
-                      </div>
-                      <div class="menu-item__bottom">
-                        <p class="typography menu-item__description">
-                          Картофельные драники, домашняя подкопчённая сметана,
-                          классическое яйцо пашет
-                        </p>
-                        <span class="menu-item__weight">300 г</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="menu__image">
-                  <img
-                    loading="lazy"
-                    src="./assets/menu-hot-appetizers-F7uTWQkg.webp"
-                    alt="горячие закуски"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__top">
-          <div class="logo">
-            <a href="/" class="logo">
-              <img
-                loading="lazy"
-                src="./assets/logo-footer-DMIGclKm.svg"
-                alt="Лого ресторана Вновь"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <div class="footer__cta">
-            <span>ВНОВЬ — новый ресторан в сердце города</span>
-
-            <button
-              type="button"
-              class="footer__button button button--secondary js-rent-button"
-            >
-              Забронировать столик
-            </button>
-          </div>
-          <div class="footer__nav">
-            <nav class="nav nav--footer" aria-label="Навигация в футере">
-              <ul id="navMenuFooter" class="nav__list">
-                <li class="nav__item nav__item--active">
-                  <a class="nav__link" href="./about">Меню</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="./menu.html">праздники</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#events">Афиша</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="./contacts.html">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="footer__info">
-            <a class="footer__link" href="tel:+74922771188">+7 4922 77-11-88</a>
-            <a class="footer__link" href="mailto:">info@vnovv.ru</a>
-
-            <div class="footer__socials socials">
-              <a
-                href="#"
-                class="socials__item icon-button icon-button--secondary"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_207_7227)">
-                    <path
-                      d="M1.06194 7.07322C5.38142 5.19172 8.26104 3.9512 9.70087 3.35189C13.8166 1.64053 14.6708 1.3433 15.2287 1.33335C15.3514 1.33127 15.6245 1.36159 15.8027 1.5058C15.9509 1.62733 15.9926 1.79169 16.0134 1.90697C16.0319 2.02224 16.0574 2.28498 16.0366 2.49007C15.8144 4.83269 14.8491 10.5175 14.3583 13.1413C14.1523 14.2516 13.7426 14.6238 13.3467 14.6601C12.4856 14.7393 11.8328 14.0916 10.9995 13.5455C9.69621 12.6906 8.96014 12.1587 7.69392 11.3246C6.23095 10.3607 7.18 9.83088 8.01334 8.96514C8.23094 8.73851 12.0226 5.29056 12.0944 4.97783C12.1036 4.93871 12.1129 4.79287 12.025 4.71602C11.9393 4.63894 11.8119 4.66532 11.7193 4.68616C11.5874 4.71579 9.50636 6.09265 5.46928 8.81652C4.879 9.22254 4.34429 9.42046 3.8628 9.41005C3.33502 9.3987 2.31656 9.11097 1.55961 8.86513C0.633672 8.56351 -0.104797 8.40402 -0.0399815 7.89175C-0.00757383 7.62508 0.360544 7.35216 1.06194 7.07322Z"
-                      fill="currentColor"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_207_7227">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-              <a
-                href="#"
-                class="socials__item icon-button icon-button--secondary"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.71454 12.992C3.24795 12.992 0.129927 9.2444 0 3.0083H2.73829C2.82824 7.58543 4.84693 9.5242 6.44592 9.92396V3.0083H9.0244V6.9558C10.6034 6.78591 12.2622 4.98706 12.8218 3.0083H15.4003C14.9705 5.44678 13.1717 7.24563 11.8925 7.98516C13.1717 8.58478 15.2205 10.1538 16 12.992H13.1617C12.5521 11.0932 11.0331 9.62415 9.0244 9.42426V12.992H8.71454Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__copyright">
-          <span>© 2025. Разработано в дизайн-бюро «Четыре»</span>
-          <a href="#" class="link">Политика конфиденциальности</a>
-          <a href="#" class="link">Реквизиты</a>
-        </div>
-      </div>
-    </footer>
-
-    <aside class="drawer">
-      <div class="drawer__overlay"></div>
-      <div class="drawer__content">
-        <!-- место для контента drawer -->
-      </div>
-    </aside>
-
-    <!-- FORM TEMPLATES-->
-
-    <template id="rentFormTemplate">
-      <div class="drawer__header">
-        <h2 class="drawer__title typography" id="drawerTitle">
-          АРЕНДА&nbsp;ЗАЛА
-        </h2>
-        <p class="typography typography--body-text drawer__subtitle">
-          Оставьте заявку — мы свяжемся с вами, чтобы уточнить детали.
-        </p>
-        <button
-          class="drawer__close icon-button icon-button--secondary js-drawer-close"
-          type="button"
-          aria-label="Закрыть"
-          id="drawerClose"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 18 18"
-            fill="none"
-          >
-            <path
-              d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
+      <div class="input-field">
+        <input class="input-field__control" name="email" type="email" placeholder="Email" autocomplete="email" />
       </div>
 
-      <form
-        id="rentForm"
-        action="/"
-        class="drawer__form form js-contact-form"
-        method="post"
-      >
+      <div class="row">
         <div class="input-field">
-          <input
-            class="input-field__control"
-            name="name"
-            type="text"
-            placeholder="Имя"
-            autocomplete="name"
-            required
-          />
-        </div>
-        <div class="input-field input-field--error">
-          <input
-            class="input-field__control"
-            name="phone"
-            id="phone"
-            type="tel"
-            placeholder="+7 (999) 123-11-11"
-            inputmode="tel"
-            required
-          />
+          <input class="input-field__control" name="date" type="text" placeholder="Дата" />
         </div>
 
         <div class="input-field">
-          <input
-            class="input-field__control"
-            name="email"
-            type="email"
-            placeholder="Email"
-            autocomplete="email"
-          />
-        </div>
-
-        <div class="row">
-          <div class="input-field">
-            <input
-              class="input-field__control"
-              name="date"
-              type="text"
-              placeholder="Дата"
-            />
-          </div>
-
-          <div class="input-field">
-            <label class="field input-field__label">
-              <input
-                class="input-field__control"
-                name="time"
-                type="text"
-                placeholder="Время"
-              />
-            </label>
-          </div>
-        </div>
-
-        <div class="input-field">
-          <textarea
-            class="input-field__control"
-            id="message"
-            name="message"
-            placeholder="Детали и пожелания"
-          ></textarea>
-        </div>
-
-        <button class="form__submit button button--primary" type="submit">
-          Отправить
-        </button>
-
-        <div class="form__policy">
-          <label class="custom-checkbox">
-            <input type="checkbox" checked="checked" />
-            <span class="checkmark"></span>
-          </label>
-          Нажимая на кнопку, я соглашаюсь с
-          <a href="#" class="link">политикой конфиденциальности</a>.
-        </div>
-      </form>
-      <div class="form__loader js-contact-form-loader">
-        <div class="spinner-loader"></div>
-      </div>
-    </template>
-
-    <template id="feedbackFormTemplate">
-      <div class="drawer__header">
-        <h2 class="drawer__title typography" id="drawerTitle">
-          Обратная связь
-        </h2>
-        <p class="typography typography--body-text drawer__subtitle">
-          Напишите нам, обратная связь делает нас лучше.
-        </p>
-        <button
-          class="drawer__close icon-button icon-button--secondary js-drawer-close"
-          type="button"
-          aria-label="Закрыть"
-          id="drawerClose"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 18 18"
-            fill="none"
-          >
-            <path
-              d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <form
-        id="rentForm"
-        action="/"
-        class="drawer__form form js-contact-form"
-        method="post"
-      >
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="name"
-            type="text"
-            placeholder="Имя"
-            autocomplete="name"
-            required
-          />
-        </div>
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="phone"
-            id="phone"
-            type="tel"
-            placeholder="+7 (999) 123-11-11"
-            inputmode="tel"
-            required
-          />
-        </div>
-
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="email"
-            type="email"
-            placeholder="Email"
-            autocomplete="email"
-          />
-        </div>
-
-        <div class="input-field">
-          <textarea
-            class="input-field__control"
-            name="message"
-            placeholder="Отзыв / пожелание / предложение "
-          ></textarea>
-        </div>
-
-        <button class="form__submit button button--primary" type="submit">
-          Отправить
-        </button>
-
-        <div class="form__policy">
-          <label class="custom-checkbox">
-            <input type="checkbox" checked="checked" />
-            <span class="checkmark"></span>
-          </label>
-          Нажимая на кнопку, я соглашаюсь с
-          <a href="#" class="link">политикой конфиденциальности</a>.
-        </div>
-      </form>
-      <div class="form__loader js-contact-form-loader">
-        <div class="spinner-loader"></div>
-      </div>
-    </template>
-
-    <template id="jobFormTemplate">
-      <div class="drawer__header">
-        <h2 class="drawer__title typography" id="drawerTitle">
-          работать у нас
-        </h2>
-        <p class="typography typography--body-text drawer__subtitle">
-          Администратор свяжется с вами в ближайшее время.
-        </p>
-        <button
-          class="drawer__close icon-button icon-button--secondary js-drawer-close"
-          type="button"
-          aria-label="Закрыть"
-          id="drawerClose"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 18 18"
-            fill="none"
-          >
-            <path
-              d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <form
-        id="jobForm"
-        action="/"
-        class="drawer__form form js-contact-form"
-        method="post"
-      >
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="name"
-            type="text"
-            placeholder="Имя"
-            autocomplete="name"
-            required
-          />
-        </div>
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="phone"
-            id="phone"
-            type="tel"
-            placeholder="+7 (999) 123-11-11"
-            inputmode="tel"
-            required
-          />
-        </div>
-
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="email"
-            type="email"
-            placeholder="Email"
-            autocomplete="email"
-          />
-        </div>
-
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="vacancy"
-            type="text"
-            placeholder="Выберите вакансию"
-          />
-        </div>
-
-        <div class="input-field">
-          <input
-            class="input-field__control"
-            name="schedule"
-            type="text"
-            placeholder="Выберите график"
-          />
-        </div>
-
-        <div class="input-file js-input-file">
-          <label for="cv" class="input-file__dropzone js-dropzone">
-            <input
-              id="cv"
-              class="input-file__input"
-              name="cv"
-              type="file"
-              accept="application/pdf"
-              aria-label="Загрузить PDF-файл резюме"
-            />
-            <div class="input-file__label">
-              <img
-                class="input-file__icon"
-                src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.8832%209.1167C12.7582%2010.9917%2012.7582%2014.025%2010.8832%2015.8917C9.00821%2017.7584%205.97487%2017.7667%204.1082%2015.8917C2.24154%2014.0167%202.2332%2010.9834%204.1082%209.1167'%20stroke='black'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.8248%2011.175C6.8748%209.22503%206.8748%206.05836%208.8248%204.10003C10.7748%202.14169%2013.9415%202.15003%2015.8998%204.10003C17.8581%206.05003%2017.8498%209.21669%2015.8998%2011.175'%20stroke='black'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                alt="Иконка ссылки"
-              />
-              <span>загрузить резюме</span>
-            </div>
-            <button
-              class="js-remove-file input-file__remove"
-              hidden
-              type="button"
-              aria-label="Удалить файл"
-              hidden
-            >
-              <img
-                src="data:image/svg+xml,%3csvg%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.4853%200.5147C17.7781%200.807522%2017.778%201.28245%2017.4853%201.57536L10.0607%208.99998L17.4853%2016.4246C17.7781%2016.7174%2017.778%2017.1924%2017.4853%2017.4853C17.1924%2017.7782%2016.7175%2017.7782%2016.4246%2017.4853L9%2010.0606L1.57538%2017.4853C1.28249%2017.7782%200.807612%2017.7782%200.514719%2017.4853C0.222038%2017.1924%200.221896%2016.7174%200.514719%2016.4246L7.93934%208.99998L0.514719%201.57536C0.222039%201.28245%200.221897%200.807522%200.514719%200.5147C0.807558%200.222092%201.28254%200.222092%201.57538%200.5147L9%207.93932L16.4246%200.5147C16.7175%200.222092%2017.1924%200.222092%2017.4853%200.5147Z'%20fill='black'/%3e%3c/svg%3e"
-                alt="закрыть"
-              />
-            </button>
-            <div class="input-file__file js-cv-file" hidden></div>
-            <p class="input-file__caption">
-              Вы можете прикрепить готовое резюме, если имеется. Формат .PDF,
-              не более 20MB.
-            </p>
-            <p
-              class="input-file__error typography js-file-error"
-              role="alert"
-              hidden
-            ></p>
+          <label class="field input-field__label">
+            <input class="input-field__control" name="time" type="text" placeholder="Время" />
           </label>
         </div>
-
-        <button class="form__submit button button--primary" type="submit">
-          Отправить
-        </button>
-
-        <div class="form__policy">
-          <label class="custom-checkbox">
-            <input type="checkbox" checked="checked" />
-            <span class="checkmark"></span>
-          </label>
-          Нажимая на кнопку, я соглашаюсь с
-          <a href="#" class="link">политикой конфиденциальности</a>.
-        </div>
-      </form>
-      <div class="form__loader js-contact-form-loader">
-        <div class="spinner-loader"></div>
       </div>
-    </template>
 
-    <template id="success-rent-form">
-      <div class="success-form">
-        <img
-          src="./assets/rent-success-BsexTMyT.webp"
-          alt="alt"
-          class="success-form__image"
-        />
-        <h2 class="success-form__title typography typography--h3">
-          Заявка отправлена
-        </h2>
-        <div class="success-form__subtitle typography typography--body-text">
-          Мы свяжемся с вами в ближайшее время. А пока вы в ожидании, можете
-          ознакомиться с нашим меню.
-        </div>
-        <a
-          class="success-form__button button button--primary"
-          href="./menu.html"
-          >Посмотреть меню</a
-        >
+      <div class="input-field">
+        <textarea class="input-field__control" id="message" name="message" placeholder="Детали и пожелания"></textarea>
       </div>
-    </template>
 
-    <template id="success-form">
-      <div class="success-form">
-        <img
-          src="./assets/success-Cudg_uNc.webp"
-          alt="alt"
-          class="success-form__image"
-        />
-        <h2 class="success-form__title typography typography--h3">
-          Заявка отправлена
-        </h2>
-        <div class="success-form__subtitle typography typography--body-text">
-          Мы свяжемся с вами в ближайшее время.
-        </div>
-        <a class="success-form__button button button--primary">ОТЛИЧНО</a>
+      <button class="form__submit button button--primary" type="submit">Отправить</button>
+
+      <div class="form__policy">
+        <label class="custom-checkbox">
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        Нажимая на кнопку, я соглашаюсь с
+        <a href="#" class="link">политикой конфиденциальности</a>.
       </div>
-    </template>
-  </body>
+    </form>
+    <div class="form__loader js-contact-form-loader">
+      <div class="spinner-loader"></div>
+    </div>
+  </template>
+
+  <template id="feedbackFormTemplate">
+    <div class="drawer__header">
+      <h2 class="drawer__title typography" id="drawerTitle">Обратная связь</h2>
+      <p class="typography typography--body-text drawer__subtitle">Напишите нам, обратная связь делает нас лучше.</p>
+      <button class="drawer__close icon-button icon-button--secondary js-drawer-close" type="button"
+        aria-label="Закрыть" id="drawerClose">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+          <path
+            d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+
+    <form id="rentForm" action="/" class="drawer__form form js-contact-form" method="post">
+      <div class="input-field">
+        <input class="input-field__control" name="name" type="text" placeholder="Имя" autocomplete="name" required />
+      </div>
+      <div class="input-field">
+        <input class="input-field__control" name="phone" id="phone" type="tel" placeholder="+7 (999) 123-11-11"
+          inputmode="tel" required />
+      </div>
+
+      <div class="input-field">
+        <input class="input-field__control" name="email" type="email" placeholder="Email" autocomplete="email" />
+      </div>
+
+      <div class="input-field">
+        <textarea class="input-field__control" name="message" placeholder="Отзыв / пожелание / предложение "></textarea>
+      </div>
+
+      <button class="form__submit button button--primary" type="submit">Отправить</button>
+
+      <div class="form__policy">
+        <label class="custom-checkbox">
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        Нажимая на кнопку, я соглашаюсь с
+        <a href="#" class="link">политикой конфиденциальности</a>.
+      </div>
+    </form>
+    <div class="form__loader js-contact-form-loader">
+      <div class="spinner-loader"></div>
+    </div>
+  </template>
+
+  <template id="jobFormTemplate">
+    <div class="drawer__header">
+      <h2 class="drawer__title typography" id="drawerTitle">работать у нас</h2>
+      <p class="typography typography--body-text drawer__subtitle">
+        Администратор свяжется с вами в ближайшее время.
+      </p>
+      <button class="drawer__close icon-button icon-button--secondary js-drawer-close" type="button"
+        aria-label="Закрыть" id="drawerClose">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+          <path
+            d="M17.4853 0.5147C17.7781 0.807522 17.778 1.28245 17.4853 1.57536L10.0607 8.99998L17.4853 16.4246C17.7781 16.7174 17.778 17.1924 17.4853 17.4853C17.1924 17.7782 16.7175 17.7782 16.4246 17.4853L9 10.0606L1.57538 17.4853C1.28249 17.7782 0.807612 17.7782 0.514719 17.4853C0.222038 17.1924 0.221896 16.7174 0.514719 16.4246L7.93934 8.99998L0.514719 1.57536C0.222039 1.28245 0.221897 0.807522 0.514719 0.5147C0.807558 0.222092 1.28254 0.222092 1.57538 0.5147L9 7.93932L16.4246 0.5147C16.7175 0.222092 17.1924 0.222092 17.4853 0.5147Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+
+    <form id="jobForm" action="/" class="drawer__form form js-contact-form" method="post">
+      <div class="input-field">
+        <input class="input-field__control" name="name" type="text" placeholder="Имя" autocomplete="name" required />
+      </div>
+      <div class="input-field">
+        <input class="input-field__control" name="phone" id="phone" type="tel" placeholder="+7 (999) 123-11-11"
+          inputmode="tel" required />
+      </div>
+
+      <div class="input-field">
+        <input class="input-field__control" name="email" type="email" placeholder="Email" autocomplete="email" />
+      </div>
+
+      <div class="input-field">
+        <input class="input-field__control" name="vacancy" type="text" placeholder="Выберите вакансию" />
+      </div>
+
+      <div class="input-field">
+        <input class="input-field__control" name="schedule" type="text" placeholder="Выберите график" />
+      </div>
+
+      <div class="input-file js-input-file">
+        <label for="cv" class="input-file__dropzone js-dropzone">
+          <input id="cv" class="input-file__input" name="cv" type="file" accept="application/pdf"
+            aria-label="Загрузить PDF-файл резюме" />
+          <div class="input-file__label">
+            <img class="input-file__icon"
+              src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.8832%209.1167C12.7582%2010.9917%2012.7582%2014.025%2010.8832%2015.8917C9.00821%2017.7584%205.97487%2017.7667%204.1082%2015.8917C2.24154%2014.0167%202.2332%2010.9834%204.1082%209.1167'%20stroke='black'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.8248%2011.175C6.8748%209.22503%206.8748%206.05836%208.8248%204.10003C10.7748%202.14169%2013.9415%202.15003%2015.8998%204.10003C17.8581%206.05003%2017.8498%209.21669%2015.8998%2011.175'%20stroke='black'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+              alt="Иконка ссылки" />
+            <span>загрузить резюме</span>
+          </div>
+          <button class="js-remove-file input-file__remove" hidden type="button" aria-label="Удалить файл" hidden>
+            <img
+              src="data:image/svg+xml,%3csvg%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.4853%200.5147C17.7781%200.807522%2017.778%201.28245%2017.4853%201.57536L10.0607%208.99998L17.4853%2016.4246C17.7781%2016.7174%2017.778%2017.1924%2017.4853%2017.4853C17.1924%2017.7782%2016.7175%2017.7782%2016.4246%2017.4853L9%2010.0606L1.57538%2017.4853C1.28249%2017.7782%200.807612%2017.7782%200.514719%2017.4853C0.222038%2017.1924%200.221896%2016.7174%200.514719%2016.4246L7.93934%208.99998L0.514719%201.57536C0.222039%201.28245%200.221897%200.807522%200.514719%200.5147C0.807558%200.222092%201.28254%200.222092%201.57538%200.5147L9%207.93932L16.4246%200.5147C16.7175%200.222092%2017.1924%200.222092%2017.4853%200.5147Z'%20fill='black'/%3e%3c/svg%3e"
+              alt="закрыть" />
+          </button>
+          <div class="input-file__file js-cv-file" hidden></div>
+          <p class="input-file__caption">
+            Вы можете прикрепить готовое резюме, если имеется. Формат .PDF, не более 20MB.
+          </p>
+          <p class="input-file__error typography js-file-error" role="alert" hidden></p>
+        </label>
+      </div>
+
+      <button class="form__submit button button--primary" type="submit">Отправить</button>
+
+      <div class="form__policy">
+        <label class="custom-checkbox">
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        Нажимая на кнопку, я соглашаюсь с
+        <a href="#" class="link">политикой конфиденциальности</a>.
+      </div>
+    </form>
+    <div class="form__loader js-contact-form-loader">
+      <div class="spinner-loader"></div>
+    </div>
+  </template>
+
+  <template id="success-rent-form">
+    <div class="success-form">
+      <img src="./assets/rent-success-BsexTMyT.webp" alt="alt" class="success-form__image" />
+      <h2 class="success-form__title typography typography--h3">Заявка отправлена</h2>
+      <div class="success-form__subtitle typography typography--body-text">
+        Мы свяжемся с вами в ближайшее время. А пока вы в ожидании, можете ознакомиться с нашим меню.
+      </div>
+      <a class="success-form__button button button--primary" href="./menu.html">Посмотреть меню</a>
+    </div>
+  </template>
+
+  <template id="success-form">
+    <div class="success-form">
+      <img src="./assets/success-Cudg_uNc.webp" alt="alt" class="success-form__image" />
+      <h2 class="success-form__title typography typography--h3">Заявка отправлена</h2>
+      <div class="success-form__subtitle typography typography--body-text">Мы свяжемся с вами в ближайшее время.</div>
+      <a class="success-form__button button button--primary">ОТЛИЧНО</a>
+    </div>
+  </template>
+
+
+
+</body>
+
 </html>
